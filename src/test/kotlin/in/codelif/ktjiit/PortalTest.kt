@@ -9,7 +9,13 @@ import `in`.codelif.ktjiit.http.Transport
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
+import `in`.codelif.ktjiit.model.FeedbackEvent
+import `in`.codelif.ktjiit.model.Rating
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
@@ -47,6 +53,9 @@ class PortalTest {
         "/myhostelallocationdetail/gethostelallocationdetail" to ("hostel" to false),
         "/studentfeeledger/loadfeesummary" to ("fees" to false),
         "/feedbackformcontroller/getFeedbackEvent" to ("fb_events" to false),
+        "/feedbackformcontroller/getGriddataForFeedback" to ("fb_grid" to true),
+        "/feedbackformcontroller/getIemQuestion" to ("fb_questions" to false),
+        "/feedbackformcontroller/savedatalist" to ("fb_save" to true),
     )
     private val seen = HashMap<String, JsonObject>()
 
@@ -147,5 +156,39 @@ class PortalTest {
         assertEquals(5, portal.fees().heads.size)
         assertTrue(portal.feedbackEvents().isEmpty())
         assertNull(seen["/studentpersinfo/getstudent-personalinformation"]!!["stynumber"])
+    }
+
+    @Test
+    fun feedback() = runBlocking {
+        val ev = FeedbackEvent("EV1", "ODD 2026 FEEDBACK", "FB1")
+        val rows = portal.feedbackGrid(ev)
+        assertEquals(2, rows.size)
+        val row = rows.first()
+        assertEquals("TEST TEACHER", row.facultyName)
+        assertEquals("L", row.component)
+        assertEquals(setOf("instituteid", "studentid", "eventid"), seen["/feedbackformcontroller/getGriddataForFeedback"]!!.keys)
+
+        portal.submitFeedback(ev, row, Rating.VERY_GOOD)
+        val q = seen["/feedbackformcontroller/getIemQuestion"]!!
+        assertEquals(
+            setOf("instituteid", "eventid", "eventdescription", "facultyid", "facultyname", "registrationid", "studentid",
+                "subjectcode", "subjectcomponentcode", "subjectcomponentid", "subjectdescription", "subjectid"),
+            q.keys,
+        )
+        assertEquals("EMP0001", q["facultyid"]!!.jsonPrimitive.content)
+
+        val save = seen["/feedbackformcontroller/savedatalist"]!!
+        assertEquals(
+            setOf("instituteid", "studentid", "eventid", "subjectid", "facultyid", "registrationid", "questionid", "facultycomments", "coursecomments"),
+            save.keys,
+        )
+        // ids go back with the type they came in
+        assertEquals(JsonPrimitive(1001), save["registrationid"])
+        assertEquals("M1", save["studentid"]!!.jsonPrimitive.content)
+        assertEquals(JsonNull, save["facultycomments"])
+        val qs = save["questionid"]!!.jsonArray.map { it.jsonObject }
+        assertEquals(listOf("Q1", "Q2"), qs.map { it["questionid"]!!.jsonPrimitive.content })
+        assertTrue(qs.all { it["rating"]!!.jsonPrimitive.content == "VERY_GOOD" })
+        assertEquals(JsonPrimitive(2), qs[1]["sequence"])
     }
 }

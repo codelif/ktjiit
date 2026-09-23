@@ -2,6 +2,9 @@ package `in`.codelif.ktjiit.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.contentOrNull
 
 @Serializable
 public data class GeneralInfo(
@@ -135,3 +138,26 @@ public data class FeedbackEvent(
 
 @Serializable
 internal data class FeedbackEventsResponse(val eventList: List<FeedbackEvent> = emptyList())
+
+/**
+ * one teacher and subject component to rate. kept as the portal's own object,
+ * ids go back exactly as they came, whatever json type they were.
+ */
+public class FeedbackRow(public val raw: JsonObject) {
+    private fun text(key: String) = (raw[key] as? JsonPrimitive)?.contentOrNull.orEmpty()
+    public val facultyName: String get() = text("employeename")
+    public val subjectCode: String get() = text("subjectcode")
+    public val subjectName: String get() = text("subjectdescription")
+    /** L, T or P */
+    public val component: String get() = text("subjectcomponentcode")
+    public val key: String get() = listOf("employeeid", "subjectid", "subjectcomponentid").joinToString("/") { text(it) }
+}
+
+@Serializable
+internal data class FeedbackGridResponse(val gridData: List<JsonObject> = emptyList())
+
+@Serializable
+internal data class FeedbackQuestionsResponse(val questionList: List<JsonObject> = emptyList())
+
+/** the portal's five answers, worst to best. every question of a form gets the same one */
+public enum class Rating { UNSATISFIED, SATISFIED, GOOD, VERY_GOOD, EXCELLENT }

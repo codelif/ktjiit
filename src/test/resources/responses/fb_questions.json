@@ -1,0 +1,9 @@
+{
+ "status": {"responseStatus": "Success", "errors": null, "identifier": null},
+ "response": {
+  "questionList": [
+   {"questionid": "Q1", "questiondescription": "Explains clearly", "rating": null},
+   {"questionid": "Q2", "questiondescription": "Is on time", "sequence": 2}
+  ]
+ }
+}

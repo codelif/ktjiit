@@ -9,6 +9,9 @@ import `in`.codelif.ktjiit.model.*
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonObjectBuilder
+import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.add
 import kotlinx.serialization.json.addJsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.decodeFromJsonElement
@@ -174,19 +177,63 @@ public class Portal(public val session: Session, private val transport: Transpor
         }.eventList
     }
 
-    /** subjects x faculty grid for an open feedback event */
-    public suspend fun feedbackGrid(event: FeedbackEvent): JsonElement =
-        transport.post("/feedbackformcontroller/getGriddataForFeedback", session.token, buildJsonObject {
+    /** every teacher and component still to be rated in an open feedback event */
+    public suspend fun feedbackGrid(event: FeedbackEvent): List<FeedbackRow> = listOrEmpty(emptyList()) {
+        call<FeedbackGridResponse>("/feedbackformcontroller/getGriddataForFeedback", encrypt = true) {
             put("instituteid", iid)
             put("studentid", session.memberId)
             put("eventid", event.id)
-        }, encrypt = true)
+        }.gridData.map(::FeedbackRow)
+    }
 
-    /** the portal posts the whole grid row back to get the questions */
-    public suspend fun feedbackQuestions(row: JsonObject): JsonElement =
-        transport.post("/feedbackformcontroller/getIemQuestion", session.token, row, encrypt = false)
+    /** the form for one row. jsjiit's shape, the portal's own screen isn't in the bundle we have */
+    public suspend fun feedbackQuestions(event: FeedbackEvent, row: FeedbackRow): List<JsonObject> =
+        call<FeedbackQuestionsResponse>("/feedbackformcontroller/getIemQuestion", encrypt = false) {
+            put("instituteid", iid)
+            put("eventid", event.id)
+            put("eventdescription", event.description)
+            for ((to, from) in QUESTION_KEYS) put(to, row.raw[from] ?: JsonNull)
+        }.questionList
 
-    /** writes feedback. the only mutating call in here, the app shows a review step first */
-    public suspend fun submitFeedback(payload: JsonObject): JsonElement =
-        transport.post("/feedbackformcontroller/savedatalist", session.token, payload, encrypt = true, retry = false)
+    /**
+     * rates one row, every question the same. the only call in here that writes:
+     * no retries, and the app shows what's about to go before it calls this.
+     */
+    public suspend fun submitFeedback(event: FeedbackEvent, row: FeedbackRow, rating: Rating): JsonElement {
+        val questions = feedbackQuestions(event, row)
+        if (questions.isEmpty()) throw PortalException.PortalError(listOf("no questions for ${row.subjectCode}"), 0)
+        return transport.post(
+            "/feedbackformcontroller/savedatalist", session.token,
+            feedbackPayload(iid, session.memberId, event, row, questions, rating), encrypt = true, retry = false,
+        )
+    }
+
+    private companion object {
+        // question payload key to grid key, as jsjiit maps them
+        val QUESTION_KEYS = listOf(
+            "facultyid" to "employeeid", "facultyname" to "employeename", "registrationid" to "registrationid",
+            "studentid" to "studentid", "subjectcode" to "subjectcode", "subjectcomponentcode" to "subjectcomponentcode",
+            "subjectcomponentid" to "subjectcomponentid", "subjectdescription" to "subjectdescription", "subjectid" to "subjectid",
+        )
+    }
+}
+
+/** savedatalist's body: each question as the portal sent it plus its rating, comments left empty */
+internal fun feedbackPayload(
+    instituteId: String,
+    studentId: String,
+    event: FeedbackEvent,
+    row: FeedbackRow,
+    questions: List<JsonObject>,
+    rating: Rating,
+): JsonObject = buildJsonObject {
+    put("instituteid", instituteId)
+    put("studentid", studentId)
+    put("eventid", event.id)
+    put("subjectid", row.raw["subjectid"] ?: JsonNull)
+    put("facultyid", row.raw["employeeid"] ?: JsonNull)
+    put("registrationid", row.raw["registrationid"] ?: JsonNull)
+    putJsonArray("questionid") { questions.forEach { q -> add(JsonObject(q + ("rating" to JsonPrimitive(rating.name)))) } }
+    put("facultycomments", JsonNull)
+    put("coursecomments", JsonNull)
 }
