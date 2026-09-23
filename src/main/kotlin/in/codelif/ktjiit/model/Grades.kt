@@ -10,10 +10,12 @@ public data class SemesterResult(
     val cgpa: Double = 0.0,
     @SerialName("totalcoursecredit") val courseCredits: Double = 0.0,
     @SerialName("earnedgradepoints") val gradePoints: Double = 0.0,
-    @SerialName("totalearnedcredits") val earnedCredits: Double = 0.0,
-    @SerialName("totalregisteredcredit") val registeredCredits: Double = 0.0,
+    // the portal's names lie: singular "credit" is this semester, plural "credits" is the running total
+    @SerialName("totalearnedcredit") val earnedCredits: Double = 0.0,
+    @SerialName("totalearnedcredits") val cumulativeCredits: Double = 0.0,
+    /** running total too, despite the name */
+    @SerialName("totalregisteredcredit") val cumulativeRegistered: Double = 0.0,
     @SerialName("totalpointsecuredcgpa") val cumulativePoints: Double = 0.0,
-    @SerialName("totalearnedcredit") val cumulativeCredits: Double = 0.0,
 )
 
 @Serializable

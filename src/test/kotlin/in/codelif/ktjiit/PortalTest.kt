@@ -132,6 +132,9 @@ class PortalTest {
         val results = portal.semesterResults("5")
         assertEquals(4, results.size)
         assertEquals(1, results.first().semester)
+        // the semester's own credits, not the running total the plural field carries
+        assertEquals(18.5, results[1].earnedCredits)
+        assertEquals(41.0, results[1].cumulativeCredits)
     }
 
     @Test
