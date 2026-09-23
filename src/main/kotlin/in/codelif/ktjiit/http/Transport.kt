@@ -30,16 +30,32 @@ public class Transport(
      * {status, response} envelope. [encrypt] sends the payload as the portal's
      * aes blob instead of json, which endpoint wants which is in the bundle.
      */
-    public suspend fun post(path: String, token: String?, payload: JsonObject?, encrypt: Boolean): JsonElement {
-        val body = payload?.let {
-            val json = it.toString()
-            if (encrypt) PortalCipher.encrypt(json, clock.now()) else json
+    // the body is built per attempt, a retry needs it keyed to the corrected clock
+    public suspend fun post(path: String, token: String?, payload: JsonObject?, encrypt: Boolean): JsonElement =
+        retryOnFreshSkew {
+            val body = payload?.toString()?.let { if (encrypt) PortalCipher.encrypt(it, clock.now()) else it }
+            exchange(path, "POST", token, body)
         }
-        val raw = exchange(path, "POST", token, body)
-        return unwrap(raw)
+
+    public suspend fun get(path: String, token: String?): JsonElement = retryOnFreshSkew { exchange(path, "GET", token, null) }
+
+    /**
+     * a fresh process doesn't know the server clock yet. around midnight our
+     * dateseq and the server's disagree, and the portal answers with nothing.
+     * that empty answer still carries a Date header, so retry once with it.
+     */
+    private suspend fun retryOnFreshSkew(send: suspend () -> Raw): JsonElement {
+        val before = dateSeqNow()
+        val raw = send()
+        return try {
+            unwrap(raw)
+        } catch (e: PortalException.EmptyResponse) {
+            if (dateSeqNow() == before) throw e
+            unwrap(send())
+        }
     }
 
-    public suspend fun get(path: String, token: String?): JsonElement = unwrap(exchange(path, "GET", token, null))
+    private fun dateSeqNow() = `in`.codelif.ktjiit.crypto.dateSeq(clock.now())
 
     /** raw bytes for pdf endpoints, errors still come back as json envelopes */
     public suspend fun bytes(path: String, token: String?): ByteArray {
