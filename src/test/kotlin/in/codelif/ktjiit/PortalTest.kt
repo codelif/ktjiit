@@ -57,7 +57,8 @@ class PortalTest {
             val path = ex.requestURI.path.removePrefix("/api")
             val (fixture, encrypted) = routes[path] ?: error("unexpected call $path")
             val body = ex.requestBody.readBytes().decodeToString()
-            val json = if (encrypted) PortalCipher.decrypt(body, now) else body
+            // the client adopts the real Date header after the first call, so either day's key is fair
+            val json = if (encrypted) runCatching { PortalCipher.decrypt(body, now) }.getOrElse { PortalCipher.decrypt(body, Instant.now()) } else body
             seen[path] = Json.parseToJsonElement(json).jsonObject
             val out = javaClass.getResourceAsStream("/responses/$fixture.json")!!.readBytes()
             ex.responseHeaders.add("Content-Type", "application/json")

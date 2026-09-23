@@ -73,6 +73,24 @@ class TransportTest {
     }
 
     @Test
+    fun `empty answer from a stale clock is retried once with the server's date`() {
+        var calls = 0
+        server.removeContext("/")
+        server.createContext("/") { ex ->
+            calls++
+            ex.requestBody.readBytes()
+            val bytes = if (calls == 1) ByteArray(0) else """{"status":{"responseStatus":"Success"},"response":1}""".toByteArray()
+            ex.sendResponseHeaders(200, if (bytes.isEmpty()) -1 else bytes.size.toLong())
+            if (bytes.isNotEmpty()) ex.responseBody.use { it.write(bytes) } else ex.close()
+        }
+        // a day ahead: first request carries the wrong dateseq, the Date header fixes it
+        val skewed = Transport("http://127.0.0.1:${server.address.port}/api", PortalClock { Instant.now().plus(Duration.ofDays(1)) })
+        val r = runBlocking { skewed.post("/x", "tok", buildJsonObject { put("a", 1) }, encrypt = true) }
+        assertEquals("1", r.jsonPrimitive.content)
+        assertEquals(2, calls)
+    }
+
+    @Test
     fun `plain payload goes as json`() {
         reply = Reply(200, """{"status":{"responseStatus":"Success"},"response":[]}""")
         post()
