@@ -4,6 +4,7 @@ import `in`.codelif.ktjiit.http.PortalException
 import `in`.codelif.ktjiit.http.Transport
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.decodeFromJsonElement
 import kotlinx.serialization.json.jsonObject
@@ -40,7 +41,12 @@ public class Auth(private val transport: Transport) {
             put("googleToken", credential)
             put("modulename", "studentportal")
         }
-        val res = Transport.json.decodeFromJsonElement<LoginResponse>(transport.post(url, null, payload, encrypt = false))
+        return sessionFrom(transport.post(url, null, payload, encrypt = false))
+    }
+
+    /** builds a session from the login `response` object, e.g. one sniffed out of the portal page */
+    public fun sessionFrom(response: JsonElement): Session {
+        val res = Transport.json.decodeFromJsonElement<LoginResponse>(response)
         if (res.token.isEmpty() || res.value.isEmpty()) throw PortalException.Malformed("login response without token")
         val now = transport.clock.now()
         return Session(
