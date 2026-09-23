@@ -2,6 +2,7 @@ package `in`.codelif.ktjiit.http
 
 import `in`.codelif.ktjiit.crypto.PortalCipher
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -13,6 +14,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import java.io.IOException
 import java.io.InputStream
 import java.net.HttpURLConnection
+import java.net.SocketTimeoutException
 import java.net.URI
 import java.util.zip.GZIPInputStream
 
@@ -22,6 +24,7 @@ public class Transport(
     private val userAgent: String? = null,
     private val connectTimeoutMs: Int = 15_000,
     private val readTimeoutMs: Int = 45_000,
+    private val retryDelaysMs: List<Long> = listOf(500, 1500),
 ) {
     internal class Raw(val code: Int, val body: ByteArray, val contentType: String?)
 
@@ -29,15 +32,37 @@ public class Transport(
      * posts to [path] (relative to [baseUrl], or absolute) and unwraps the
      * {status, response} envelope. [encrypt] sends the payload as the portal's
      * aes blob instead of json, which endpoint wants which is in the bundle.
+     * pass [retry] false for anything that writes.
      */
     // the body is built per attempt, a retry needs it keyed to the corrected clock
-    public suspend fun post(path: String, token: String?, payload: JsonObject?, encrypt: Boolean): JsonElement =
-        retryOnFreshSkew {
-            val body = payload?.toString()?.let { if (encrypt) PortalCipher.encrypt(it, clock.now()) else it }
-            exchange(path, "POST", token, body)
+    public suspend fun post(path: String, token: String?, payload: JsonObject?, encrypt: Boolean, retry: Boolean = true): JsonElement =
+        retryTransient(retry) {
+            retryOnFreshSkew {
+                val body = payload?.toString()?.let { if (encrypt) PortalCipher.encrypt(it, clock.now()) else it }
+                exchange(path, "POST", token, body)
+            }
         }
 
-    public suspend fun get(path: String, token: String?): JsonElement = retryOnFreshSkew { exchange(path, "GET", token, null) }
+    public suspend fun get(path: String, token: String?): JsonElement =
+        retryTransient(true) { retryOnFreshSkew { exchange(path, "GET", token, null) } }
+
+    /** the portal's gateway drops the odd request under load and answers fine a second later */
+    private suspend fun <T> retryTransient(enabled: Boolean, send: suspend () -> T): T {
+        var attempt = 0
+        while (true) {
+            try {
+                return send()
+            } catch (e: PortalException) {
+                if (!enabled || attempt >= retryDelaysMs.size || !e.transient) throw e
+                delay(retryDelaysMs[attempt++])
+            }
+        }
+    }
+
+    // a timeout already cost us 45s, don't make it three
+    private val PortalException.transient: Boolean
+        get() = this is PortalException.ServerUnavailable || this is PortalException.EmptyResponse ||
+            (this is PortalException.Network && cause !is SocketTimeoutException)
 
     /**
      * a fresh process doesn't know the server clock yet. around midnight our
@@ -58,14 +83,14 @@ public class Transport(
     private fun dateSeqNow() = `in`.codelif.ktjiit.crypto.dateSeq(clock.now())
 
     /** raw bytes for pdf endpoints, errors still come back as json envelopes */
-    public suspend fun bytes(path: String, token: String?): ByteArray {
+    public suspend fun bytes(path: String, token: String?): ByteArray = retryTransient(true) {
         val raw = exchange(path, "GET", token, null)
         if (raw.body.isEmpty()) throw PortalException.EmptyResponse()
         if (raw.contentType?.contains("json") == true) {
             unwrap(raw)
             throw PortalException.Malformed("expected a file, got json")
         }
-        return raw.body
+        raw.body
     }
 
     internal suspend fun exchange(path: String, method: String, token: String?, body: String?): Raw =
@@ -113,8 +138,9 @@ public class Transport(
             403 -> throw PortalException.Forbidden()
         }
         val text = raw.body.decodeToString()
+        val shape = "${raw.contentType ?: "no type"}, ${raw.body.size} bytes"
         if (text.isBlank()) {
-            if (raw.code >= 500) throw PortalException.ServerUnavailable(raw.code)
+            if (raw.code >= 500) throw PortalException.ServerUnavailable(raw.code, shape)
             if (raw.code >= 400) throw PortalException.PortalError(emptyList(), raw.code)
             throw PortalException.EmptyResponse()
         }
@@ -122,14 +148,14 @@ public class Transport(
             json.parseToJsonElement(text) as? JsonObject
         } catch (e: Exception) {
             null
-        } ?: if (raw.code >= 500) throw PortalException.ServerUnavailable(raw.code)
+        } ?: if (raw.code >= 500) throw PortalException.ServerUnavailable(raw.code, shape)
         else throw PortalException.Malformed("not an envelope (http ${raw.code})")
 
         val status = root["status"] as? JsonObject
         val state = status?.get("responseStatus")?.jsonPrimitive?.contentOrNull
         if (state == "Success" && raw.code < 400) return root["response"] ?: JsonNull
 
-        if (raw.code >= 500 && status == null) throw PortalException.ServerUnavailable(raw.code)
+        if (raw.code >= 500 && status == null) throw PortalException.ServerUnavailable(raw.code, shape)
         val errors = runCatching {
             status?.get("errors")?.jsonArray?.mapNotNull { it.jsonPrimitive.contentOrNull }
         }.getOrNull().orEmpty()

@@ -9,8 +9,9 @@ public sealed class PortalException(message: String, cause: Throwable? = null) :
     /** 403, usually a bad Origin or a token the server refuses outright */
     public class Forbidden : PortalException("forbidden")
 
-    /** 5xx, the portal falls over a lot during result season */
-    public class ServerUnavailable(public val code: Int) : PortalException("server unavailable ($code)")
+    /** 5xx, the portal falls over a lot during result season. [shape] is content type and size, never the body */
+    public class ServerUnavailable(public val code: Int, public val shape: String = "") :
+        PortalException("server unavailable ($code)")
 
     /** 200 with nothing in it, what you get for a bad LocalName */
     public class EmptyResponse : PortalException("empty response")

@@ -188,5 +188,5 @@ public class Portal(public val session: Session, private val transport: Transpor
 
     /** writes feedback. the only mutating call in here, the app shows a review step first */
     public suspend fun submitFeedback(payload: JsonObject): JsonElement =
-        transport.post("/feedbackformcontroller/savedatalist", session.token, payload, encrypt = true)
+        transport.post("/feedbackformcontroller/savedatalist", session.token, payload, encrypt = true, retry = false)
 }

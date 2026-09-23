@@ -50,7 +50,7 @@ class TransportTest {
         server.start()
         // the jdk server stamps a real Date header, so run our clock 508s fast against it
         val clock = PortalClock { Instant.now().plusSeconds(508) }
-        transport = Transport("http://127.0.0.1:${server.address.port}/api", clock)
+        transport = Transport("http://127.0.0.1:${server.address.port}/api", clock, retryDelaysMs = listOf(1, 1))
     }
 
     @AfterEach
@@ -88,6 +88,27 @@ class TransportTest {
         val r = runBlocking { skewed.post("/x", "tok", buildJsonObject { put("a", 1) }, encrypt = true) }
         assertEquals("1", r.jsonPrimitive.content)
         assertEquals(2, calls)
+    }
+
+    @Test
+    fun `a gateway hiccup is retried, a write is not`() {
+        var calls = 0
+        server.removeContext("/")
+        server.createContext("/") { ex ->
+            calls++
+            ex.requestBody.readBytes()
+            val bytes = (if (calls == 1) "<html>502</html>" else """{"status":{"responseStatus":"Success"},"response":1}""").toByteArray()
+            ex.sendResponseHeaders(if (calls == 1) 502 else 200, bytes.size.toLong())
+            ex.responseBody.use { it.write(bytes) }
+        }
+        assertEquals("1", post().jsonPrimitive.content)
+        assertEquals(2, calls)
+        calls = 0
+        val e = assertThrows<PortalException.ServerUnavailable> {
+            runBlocking { transport.post("/x", "tok", buildJsonObject { put("a", 1) }, encrypt = false, retry = false) }
+        }
+        assertEquals(1, calls)
+        assertTrue(e.shape.endsWith("16 bytes"))
     }
 
     @Test
