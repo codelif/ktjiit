@@ -1,0 +1,60 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "studentAttdsummarylist": [
+   {
+    "attendanceby": "X8F4792FB94481",
+    "attendancestatus": "Current",
+    "classtype": "Regular",
+    "datetime": "21/09/2026 (08:00:AM - 09:50 AM)",
+    "present": "Present"
+   },
+   {
+    "attendanceby": "X8F4792FB94481",
+    "attendancestatus": "Current",
+    "classtype": "Regular",
+    "datetime": "14/09/2026 (08:00:AM - 10:00 AM)",
+    "present": "Present"
+   },
+   {
+    "attendanceby": "X1A760D3",
+    "attendancestatus": "Current",
+    "classtype": "Regular",
+    "datetime": "24/08/2026 (08:00:AM - 09:50 AM)",
+    "present": "Present"
+   },
+   {
+    "attendanceby": "X8F4792FB94481",
+    "attendancestatus": "Current",
+    "classtype": "Regular",
+    "datetime": "17/08/2026 (08:00:AM - 10:00 AM)",
+    "present": "Present"
+   },
+   {
+    "attendanceby": "X8F4792FB94481",
+    "attendancestatus": "Current",
+    "classtype": "Regular",
+    "datetime": "10/08/2026 (08:00:AM - 10:00 AM)",
+    "present": "Absent"
+   },
+   {
+    "attendanceby": "X8F4792FB94481",
+    "attendancestatus": "Current",
+    "classtype": "Regular",
+    "datetime": "03/08/2026 (08:00:AM - 10:00 AM)",
+    "present": "Present"
+   },
+   {
+    "attendanceby": "X8F4792FB94481",
+    "attendancestatus": "Current",
+    "classtype": "Regular",
+    "datetime": "27/07/2026 (08:00:AM - 10:00 AM)",
+    "present": "Present"
+   }
+  ]
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "semesterCodeinfo": {
+   "semestercode": [
+    {
+     "registrationdesc": "2026ODDSEM",
+     "registrationid": "FAKE776F012FFB28",
+     "registrationcode": "2026ODDSEM"
+    }
+   ]
+  }
+ }
+}

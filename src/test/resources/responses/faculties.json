@@ -1,0 +1,181 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "registrations": [
+   {
+    "audtsubject": "Y",
+    "credits": 3.0,
+    "employeecode": "XA091C27",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "Audit",
+    "stytype": "REG",
+    "subjectcode": "20B13HS311",
+    "subjectcomponentcode": "L",
+    "subjectdesc": "INDIAN CONSTITUTION & TRADITIONAL KNOWLEDGE",
+    "subjectid": "198860"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 3.0,
+    "employeecode": "X8CFB83B",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "24B11CS312",
+    "subjectcomponentcode": "L",
+    "subjectdesc": "OPERATING SYSTEMS",
+    "subjectid": "FAKE5FE3A234E7AF"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 4.0,
+    "employeecode": "XA3A9862",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "24B11CS313",
+    "subjectcomponentcode": "L",
+    "subjectdesc": "COMPUTER NETWORKS",
+    "subjectid": "FAKECCE71157A6FD"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 4.0,
+    "employeecode": "X2CDBD01",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "24B11CS313",
+    "subjectcomponentcode": "T",
+    "subjectdesc": "COMPUTER NETWORKS",
+    "subjectid": "FAKECCE71157A6FD"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 1.0,
+    "employeecode": "XE0D348E",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "24B15CS312",
+    "subjectcomponentcode": "P",
+    "subjectdesc": "OPERATING SYSTEMS LAB",
+    "subjectid": "FAKEC8EA1DBB8321"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 1.0,
+    "employeecode": "XD7F06EC",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "24B15CS313",
+    "subjectcomponentcode": "P",
+    "subjectdesc": "COMPUTER NETWORKS LAB",
+    "subjectid": "FAKEAEF1013D7772"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 1.0,
+    "employeecode": "XD052824",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "24B15CS314",
+    "subjectcomponentcode": "P",
+    "subjectdesc": "FULL STACK DEVELOPMENT LAB",
+    "subjectid": "FAKEE6F0DE014501"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 2.0,
+    "employeecode": "XE1D6559",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "24B17CS311",
+    "subjectcomponentcode": "P",
+    "subjectdesc": "SUMMER TRAINING - II",
+    "subjectid": "FAKE85FAA2D276DF"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 2.0,
+    "employeecode": "X7A09E75",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "26B12CS315",
+    "subjectcomponentcode": "L",
+    "subjectdesc": "FUNDAMENTALS OF IOT ANALYTICS",
+    "subjectid": "FAKEEBF3F1303B04"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 2.0,
+    "employeecode": "X9FB",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "26B14CS354",
+    "subjectcomponentcode": "L",
+    "subjectdesc": "SCALABLE DATA SCIENCE",
+    "subjectid": "FAKEA19800650B4068"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 3.0,
+    "employeecode": "X9FB",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "26B14PH311",
+    "subjectcomponentcode": "L",
+    "subjectdesc": "SOLID STATE PHYSICS",
+    "subjectid": "FAKE454E14FC52580C"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 1.0,
+    "employeecode": "XC469A83",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "26B16CS315",
+    "subjectcomponentcode": "P",
+    "subjectdesc": "FUNDAMENTALS OF IOT ANALYTICS LAB",
+    "subjectid": "FAKE0C0F280CF7BA"
+   },
+   {
+    "audtsubject": "N",
+    "credits": 1.0,
+    "employeecode": "X886307A",
+    "employeename": "TEST NAME",
+    "minorsubject": "N",
+    "remarks": "REG",
+    "stytype": "REG",
+    "subjectcode": "26B16CS318\t",
+    "subjectcomponentcode": "P",
+    "subjectdesc": "FUNDAMENTALS OF COMPUTING FOR DATA SCIENCE LAB",
+    "subjectid": "FAKE9790A0B75BC8"
+   }
+  ],
+  "totalcreditpoints": 21.0
+ }
+}

@@ -1,0 +1,994 @@
+{
+    "student": {
+        "name": "TEST STUDENT S5",
+        "enrollmentNo": "9913054772",
+        "program": "B.T",
+        "branch": "CSE",
+        "semester": "5",
+        "registrationCode": "2025ODDSEM"
+    },
+    "events": [
+        "END TERM-40 MARKS",
+        "END TERM-35 MARKS",
+        "PROJECT REPORT",
+        "MIDTR-25ODD-30 MARKS",
+        "ENDVIV-LAB-25ODD",
+        "FINAL EVALUATION",
+        "MID VIVA-LAB-25ODD",
+        "T-2- 25ODD -20 MARKS",
+        "TEST-1"
+    ],
+    "subjects": [
+        {
+            "code": "15B11CI311",
+            "name": "DATA STRUCTURES",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 27.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 27.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 10.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 10.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B11HS211",
+            "name": "ECONOMICS",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 18.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 18.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 15.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 15.5,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B17CI371",
+            "name": "DATA STRUCTURES LAB",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 18.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 18.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B11CS212",
+            "name": "Theory of Computation",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 8.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 8.5,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B11CS213",
+            "name": "Database Management Systems",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 25.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 25.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 10.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 10.5,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B15CS213",
+            "name": "Database Management Systems Lab",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 15.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 15.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B15CS214",
+            "name": "Unix Programming Lab",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 25.0,
+                        "max": 40.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 25.0,
+                        "max": 40.0
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 22.0,
+                        "max": 30.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 22.0,
+                        "max": 30.0
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B15CS215",
+            "name": "Object Oriented Programming using Java",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B17CS211",
+            "name": "Summer Training-I",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 30.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 30.0
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 35.0,
+                        "max": 40.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 35.0,
+                        "max": 40.0
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "25B11MA213",
+            "name": "Mathematical Foundations for Artificial Intelligence and Data Science",
+            "scores": [
+                {
+                    "event": "END TERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END TERM-35 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 16.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 16.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "PROJECT REPORT",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTR-25ODD-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDVIV-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "FINAL EVALUATION",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB-25ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T-2- 25ODD -20 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        }
+    ],
+    "generated": "Wed Sep 23 20:40:15 IST 2026"
+}

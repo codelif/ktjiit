@@ -1,0 +1,20 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "eventcode": {
+   "examevent": [
+    {
+     "exameventcode": "TEST-1",
+     "eventfrom": 1785781800000,
+     "exameventdesc": "TEST-1 OF 2026 ODD SEM",
+     "registrationid": "FAKEAF69BBD7D62E",
+     "exameventid": "FAKE65EF7EF92318B"
+    }
+   ]
+  }
+ }
+}

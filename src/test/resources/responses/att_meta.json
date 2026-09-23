@@ -1,0 +1,36 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "client": "XEEB",
+  "headerlist": [
+   {
+    "branchdesc": "COMPUTER SCIENCE & ENGINEERING",
+    "name": "TEST NAME",
+    "programdesc": "BACHELOR OF TECHNOLOGY",
+    "stynumber": "5"
+   }
+  ],
+  "semlist": [
+   {
+    "registrationcode": "2026ODDSEM",
+    "registrationid": "FAKEFFFE2122F540"
+   },
+   {
+    "registrationcode": "2026EVESEM",
+    "registrationid": "FAKE270B1E3C4AF0"
+   },
+   {
+    "registrationcode": "2025ODDSEM",
+    "registrationid": "FAKE2436271CB286"
+   },
+   {
+    "registrationcode": "2025EVESEM",
+    "registrationid": "FAKE8E2C8D926D80"
+   }
+  ]
+ }
+}

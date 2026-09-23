@@ -1,0 +1,64 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "bankinfo": {
+   "bankcity": "XB1B3AC",
+   "accountholdername": "TEST NAME",
+   "bankaddress": "XECD6AEE05F2226D929DBBBA47FDBE4A18F5A1",
+   "bankaccountnumber": "40627574535147",
+   "oldbankaccountnumber": "21408528371332",
+   "bankstate": "X32AD1447A7C2",
+   "bankcitypin": "515215",
+   "bankname": "XF7B2E4541FE6E",
+   "ifsccode": "XBCEA5B2F9B",
+   "freezed": "Y",
+   "acholdertypeflag": "X0A8"
+  },
+  "addressinfo": {
+   "caddress3": "",
+   "cdistrict": "X0D8EDF",
+   "caddress1": "X82B3EE5706071FE884C38595",
+   "caddress2": "XED82380E59B82B3CB7",
+   "cstate": "XFAF2B6735174",
+   "cpin": "671415",
+   "ccity": "XDD7FA5"
+  },
+  "accounttypes": [
+   {
+    "name": "TEST NAME",
+    "type": "X0D1"
+   },
+   {
+    "name": "TEST NAME",
+    "type": "X57CEC"
+   },
+   {
+    "name": "TEST NAME",
+    "type": "XE7A79"
+   }
+  ],
+  "contactinfo": {
+   "studentemail": "",
+   "studentmobileno": "",
+   "studentpanno": "",
+   "aadharcardno": "571374432139"
+  },
+  "studentinfomedicalMap": [
+   {
+    "convulsiorisoffits": "XEA8",
+    "historyofanydrugintake": "XC5A",
+    "otherhistory": "X3F5",
+    "bronchialasthma": "X872",
+    "allergicbronchitis": "X168",
+    "diabetesmellitus": "X25C",
+    "anycongentialdieases": "X6D1",
+    "majorsurgery": "XD03",
+    "hypertension": "X19C"
+   }
+  ]
+ }
+}

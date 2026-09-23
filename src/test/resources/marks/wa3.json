@@ -1,0 +1,543 @@
+{
+    "student": {
+        "name": "TEST STUDENT S10",
+        "enrollmentNo": "9927631562",
+        "program": "B.T",
+        "branch": "CSE",
+        "semester": "1",
+        "registrationCode": "2024ODDSEM"
+    },
+    "events": [
+        "MID VIVA-LAB24ODDSEM",
+        "END VIVA-LAB24ODDSEM",
+        "TEST-1",
+        "MID TERM-24ODD",
+        "TEST-2"
+    ],
+    "subjects": [
+        {
+            "code": "15B11CI111",
+            "name": "SOFTWARE DEVELOPMENT FUNDAMENTALS-1",
+            "scores": [
+                {
+                    "event": "MID VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID TERM-24ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-2",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 12.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 12.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B11HS112",
+            "name": "ENGLISH",
+            "scores": [
+                {
+                    "event": "MID VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID TERM-24ODD",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 18.0,
+                        "max": 30.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 18.0,
+                        "max": 30.0
+                    }
+                },
+                {
+                    "event": "TEST-2",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B11MA111",
+            "name": "MATHEMATICS-1",
+            "scores": [
+                {
+                    "event": "MID VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID TERM-24ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-2",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 6.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 6.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B11PH111",
+            "name": "PHYSICS-1",
+            "scores": [
+                {
+                    "event": "MID VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID TERM-24ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-2",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 7.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 7.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B17PH171",
+            "name": "PHYSICS LAB-1",
+            "scores": [
+                {
+                    "event": "MID VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID TERM-24ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-2",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "18B15GE112",
+            "name": "WORKSHOP",
+            "scores": [
+                {
+                    "event": "MID VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 15.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 15.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID TERM-24ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-2",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B11EC111",
+            "name": "Basic Electronics",
+            "scores": [
+                {
+                    "event": "MID VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 11.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 11.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID TERM-24ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-2",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 10.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 10.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B15CS111",
+            "name": "Software Development Fundamentals Lab-I",
+            "scores": [
+                {
+                    "event": "MID VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID TERM-24ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-2",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B15EC111",
+            "name": "Basic Electronics Lab",
+            "scores": [
+                {
+                    "event": "MID VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB24ODDSEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID TERM-24ODD",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "TEST-2",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        }
+    ],
+    "generated": "Wed Dec 18 10:30:42 IST 2024"
+}

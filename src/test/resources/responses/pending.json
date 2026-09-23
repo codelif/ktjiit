@@ -1,0 +1,12 @@
+{
+ "status": {
+  "responseStatus": "Failure",
+  "errors": [
+   "NO APPROVED REQUEST FOUND"
+  ],
+  "identifier": "GIPSubjectRegistrationService"
+ },
+ "response": {
+  "status": "Failed"
+ }
+}

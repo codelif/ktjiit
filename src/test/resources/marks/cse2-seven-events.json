@@ -1,0 +1,650 @@
+{
+    "student": {
+        "name": "TEST STUDENT S6",
+        "enrollmentNo": "9980143234",
+        "program": "B.T",
+        "branch": "CSE",
+        "semester": "5",
+        "registrationCode": "2025EVESEM"
+    },
+    "events": [
+        "ENDTERM-40 MARKS",
+        "ENDTERM-35 MARKS",
+        "T2-2025EVE-20MARKS",
+        "MIDTERM-30 MARKS",
+        "T1-2025 EVEN SEM",
+        "MID VIVA-LAB 25 EVEN",
+        "END VVIA-LAB-25EVEN"
+    ],
+    "subjects": [
+        {
+            "code": "15B11CI211",
+            "name": "SOFTWARE DEVELOPMENT FUNDAMENTALS-2",
+            "scores": [
+                {
+                    "event": "ENDTERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTERM-35 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 28.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 28.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "T2-2025EVE-20MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 14.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 14.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2025 EVEN SEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 12.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 12.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 25 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VVIA-LAB-25EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B11MA211",
+            "name": "MATHEMATICS-2",
+            "scores": [
+                {
+                    "event": "ENDTERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTERM-35 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "T2-2025EVE-20MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2025 EVEN SEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 6.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 6.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 25 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VVIA-LAB-25EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B11PH211",
+            "name": "PHYSICS-2",
+            "scores": [
+                {
+                    "event": "ENDTERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTERM-35 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "T2-2025EVE-20MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 16.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 16.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2025 EVEN SEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 25 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VVIA-LAB-25EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B17PH271",
+            "name": "PHYSICS LAB-2",
+            "scores": [
+                {
+                    "event": "ENDTERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2025EVE-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2025 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 25 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VVIA-LAB-25EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 16.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 16.5,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "18B15GE111",
+            "name": "ENGINEERING DRAWING & DESIGN",
+            "scores": [
+                {
+                    "event": "ENDTERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2025EVE-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2025 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 25 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VVIA-LAB-25EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 18.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 18.5,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B11HS111",
+            "name": "Universal Human Values (UHV)",
+            "scores": [
+                {
+                    "event": "ENDTERM-40 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 26.0,
+                        "max": 40.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 26.0,
+                        "max": 40.0
+                    }
+                },
+                {
+                    "event": "ENDTERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2025EVE-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 22.0,
+                        "max": 30.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 22.0,
+                        "max": 30.0
+                    }
+                },
+                {
+                    "event": "T1-2025 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 25 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VVIA-LAB-25EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B15CS121",
+            "name": "Software Development Lab-II",
+            "scores": [
+                {
+                    "event": "ENDTERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2025EVE-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2025 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 25 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 17.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VVIA-LAB-25EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 15.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 15.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B16HS111",
+            "name": "Life Skills and Professional Communication Lab",
+            "scores": [
+                {
+                    "event": "ENDTERM-40 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTERM-35 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2025EVE-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2025 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 25 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 15.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 15.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VVIA-LAB-25EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        }
+    ],
+    "generated": "Wed Sep 23 20:40:51 IST 2026"
+}

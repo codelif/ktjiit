@@ -1,0 +1,15 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "registeredCredits": 21,
+  "totalreqcredit": 160,
+  "earnedcredit": 89,
+  "studentName": "X6BBB913E4D7",
+  "semester": "5",
+  "enrollmentno": "1005488610"
+ }
+}

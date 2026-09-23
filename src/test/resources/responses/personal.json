@@ -1,0 +1,81 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "photo&signature": {
+   "signature": null,
+   "photo": "/9j/AA=="
+  },
+  "qualification": [
+   {
+    "division": 4,
+    "fullmarks": 400,
+    "qualificationcode": "X9C1",
+    "obtainedmarks": 642,
+    "yearofpassing": 8948,
+    "grade": "",
+    "cgpa": 9,
+    "percentagemarks": 50.5,
+    "boardname": "X7B8A6DBD13"
+   },
+   {
+    "division": 4,
+    "fullmarks": 378,
+    "qualificationcode": "XA4A",
+    "obtainedmarks": 208,
+    "yearofpassing": 4223,
+    "grade": "",
+    "cgpa": 9,
+    "percentagemarks": 11,
+    "boardname": "X3B6CBF"
+   }
+  ],
+  "generalinformation": {
+   "cdistrict": "X9C6B08",
+   "apaarid": "910920106359",
+   "academicyear": "1837",
+   "gender": "X54B",
+   "cpostalcode": 746873,
+   "cstatename": "XAA70F41AD3B3",
+   "studentcellno": "1635626346",
+   "admissionyear": "3821",
+   "parentemailid": "FAKE1571CCACE3D215E1C8",
+   "branch": "X62A",
+   "ccityname": "XDF69F4",
+   "studentemailid": "FAKEF1636D2686C86ADDDF25F1",
+   "ppostalcode": 864321,
+   "studenttelephoneno": "",
+   "registrationno": "5680092964",
+   "pdistrict": "XD06CEB",
+   "parentcellno": "1054503915",
+   "sectioncode": "X238",
+   "mothername": "TEST NAME",
+   "institutecode": "X672",
+   "dateofbirth": "XB0DFD0C09",
+   "paddress1": "X8B8938C3AB1ECAF6EDE1B436",
+   "paddress2": "X265DE2E26570B74FB5",
+   "paddress3": "",
+   "studentname": "TEST NAME",
+   "pcityname": "X62640B",
+   "batch": "X66B",
+   "studentpersonalemailid": "FAKE8A986BF9A39D307A",
+   "caddress3": "",
+   "bloodgroup": "X4E6",
+   "caddress1": "X3C9B017422FEC7040ADC4FDD",
+   "parenttelephoneno": "5842129711",
+   "programcode": "XE71",
+   "nationality": "X79025",
+   "pstatename": "XAACA730F8512",
+   "fathersname": "TEST NAME",
+   "semester": 1,
+   "bankaccountno": "68040596121082",
+   "designation": "XBE7FD701",
+   "bankname": "X78296967BE1E9",
+   "category": "X1BA",
+   "studentPhotoEvent": "XB9EC93893D98FE11CD990FF7CBF54611F987E2F6878"
+  }
+ }
+}

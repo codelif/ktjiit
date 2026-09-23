@@ -1,0 +1,94 @@
+{
+    "student": {
+        "name": "TEST STUDENT S1",
+        "enrollmentNo": "99246911",
+        "program": "B.T",
+        "branch": "ECE",
+        "semester": "8",
+        "registrationCode": "2026EVESEM"
+    },
+    "events": [
+        "T1-2026 EVEN SEM",
+        "T2-2026EVEN-20MARKS",
+        "MID VIVA-PROJ-26EVE"
+    ],
+    "subjects": [
+        {
+            "code": "15B19EC891",
+            "name": "PROJECT PART-2",
+            "scores": [
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-PROJ-26EVE",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 16.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 16.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "15B1NHS832",
+            "name": "INTERNATIONAL STUDIES",
+            "scores": [
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 15.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 15.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "absent"
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 0.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID VIVA-PROJ-26EVE",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        }
+    ],
+    "generated": "Mon Apr 20 01:46:33 IST 2026"
+}

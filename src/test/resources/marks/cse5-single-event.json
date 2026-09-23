@@ -1,0 +1,73 @@
+{
+    "student": {
+        "name": "TEST STUDENT S3",
+        "enrollmentNo": "9931136542",
+        "program": "B.T",
+        "branch": "CSE",
+        "semester": "5",
+        "registrationCode": "2026ODDSEM"
+    },
+    "events": [
+        "TEST-1"
+    ],
+    "subjects": [
+        {
+            "code": "24B11CS312",
+            "name": "OPERATING SYSTEMS",
+            "scores": [
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B11CS313",
+            "name": "COMPUTER NETWORKS",
+            "scores": [
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "26B12CS315",
+            "name": "FUNDAMENTALS OF IOT ANALYTICS",
+            "scores": [
+                {
+                    "event": "TEST-1",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 7.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 7.0,
+                        "max": 20.0
+                    }
+                }
+            ]
+        }
+    ],
+    "generated": "Wed Sep 23 20:39:45 IST 2026"
+}

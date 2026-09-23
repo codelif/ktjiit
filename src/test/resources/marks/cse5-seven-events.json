@@ -1,0 +1,808 @@
+{
+    "student": {
+        "name": "TEST STUDENT S4",
+        "enrollmentNo": "9980433804",
+        "program": "B.T",
+        "branch": "CSE",
+        "semester": "5",
+        "registrationCode": "2026EVESEM"
+    },
+    "events": [
+        "ENDTR-26EVE-35MARKS",
+        "T2-2026EVEN-20MARKS",
+        "MID VIVA-LAB 26 EVEN",
+        "T1-2026 EVEN SEM",
+        "END VIVA-LAB 26 EVEN",
+        "ENDTR-26EVE-40MARKS",
+        "MIDTERM-30 MARKS"
+    ],
+    "subjects": [
+        {
+            "code": "19B13BT211",
+            "name": "ENVIRONMENTAL STUDIES",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 15.5,
+                        "max": 40.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 15.5,
+                        "max": 40.0
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 10.5,
+                        "max": 30.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 10.5,
+                        "max": 30.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B11CS221",
+            "name": "Design and Analysis of Algorithms",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 21.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 21.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 9.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 9.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 8.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 8.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B11CS222",
+            "name": "Artificial Intelligence and Machine Learning",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 8.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 8.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 14.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B11CS223",
+            "name": "Software Engineering",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 22.5,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 22.5,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 11.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 11.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 10.5,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 10.5,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B15CS221",
+            "name": "Design and Analysis of Algorithms Lab",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 8.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 8.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B15CS222",
+            "name": "Artificial Intelligence and Machine Learning Lab",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 15.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 15.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 13.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "24B15CS224",
+            "name": "Competitive Programming Lab",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 19.5,
+                        "max": 40.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 19.5,
+                        "max": 40.0
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 24.0,
+                        "max": 30.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 24.0,
+                        "max": 30.0
+                    }
+                }
+            ]
+        },
+        {
+            "code": "25B11EC311",
+            "name": "Digital Systems and Computer Organisation",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 26.0,
+                        "max": 35.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 26.0,
+                        "max": 35.0
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 12.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 12.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 19.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "25B15EC311",
+            "name": "Digital Systems and Computer Organisation Lab",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 9.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 9.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        },
+        {
+            "code": "25B16CS211",
+            "name": "Fundamentals of Data Analytics Lab",
+            "scores": [
+                {
+                    "event": "ENDTR-26EVE-35MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "T2-2026EVEN-20MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MID VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 20.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "T1-2026 EVEN SEM",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "END VIVA-LAB 26 EVEN",
+                    "marks": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    },
+                    "weighted": {
+                        "type": "value",
+                        "obtained": 11.0,
+                        "max": 20.0
+                    }
+                },
+                {
+                    "event": "ENDTR-26EVE-40MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                },
+                {
+                    "event": "MIDTERM-30 MARKS",
+                    "marks": {
+                        "type": "na"
+                    },
+                    "weighted": {
+                        "type": "na"
+                    }
+                }
+            ]
+        }
+    ],
+    "generated": "Wed Sep 23 20:40:03 IST 2026"
+}

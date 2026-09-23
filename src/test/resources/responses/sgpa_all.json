@@ -1,0 +1,79 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "semesterList": [
+   {
+    "totalpointsecuredsgpa": 174,
+    "totalcoursecredit": 22.5,
+    "totalearnedcredits": 22.5,
+    "totalpointsecuredcgpa": 174,
+    "totalearnedcredit": 22.5,
+    "sgpa": 7.7,
+    "stynumber": "1",
+    "totalregisteredcredit": 22.5,
+    "prograsivegradepoints": 174,
+    "registeredcredit": 22.5,
+    "totalgradepoints": 71,
+    "cgpa": 7.7,
+    "prograsivetotalearnedcredit": 0,
+    "earnedgradepoints": 174,
+    "prograde": 71
+   },
+   {
+    "totalpointsecuredsgpa": 143.5,
+    "totalcoursecredit": 18.5,
+    "totalearnedcredits": 41.0,
+    "totalpointsecuredcgpa": 143.5,
+    "totalearnedcredit": 18.5,
+    "sgpa": 7.8,
+    "stynumber": "2",
+    "totalregisteredcredit": 41.0,
+    "prograsivegradepoints": 317.5,
+    "registeredcredit": 18.5,
+    "totalgradepoints": 56,
+    "cgpa": 7.7,
+    "prograsivetotalearnedcredit": 18.5,
+    "earnedgradepoints": 143.5,
+    "prograde": 127
+   },
+   {
+    "totalpointsecuredsgpa": 195,
+    "totalcoursecredit": 24,
+    "totalearnedcredits": 65.0,
+    "totalpointsecuredcgpa": 195,
+    "totalearnedcredit": 24,
+    "sgpa": 8.13,
+    "stynumber": "3",
+    "totalregisteredcredit": 65.0,
+    "prograsivegradepoints": 512.5,
+    "registeredcredit": 24,
+    "totalgradepoints": 84,
+    "cgpa": 7.88,
+    "prograsivetotalearnedcredit": 42.5,
+    "earnedgradepoints": 195,
+    "prograde": 211
+   },
+   {
+    "totalpointsecuredsgpa": 197,
+    "totalcoursecredit": 24,
+    "totalearnedcredits": 89.0,
+    "totalpointsecuredcgpa": 197,
+    "totalearnedcredit": 24,
+    "sgpa": 8.21,
+    "stynumber": "4",
+    "totalregisteredcredit": 89.0,
+    "prograsivegradepoints": 709.5,
+    "registeredcredit": 24,
+    "totalgradepoints": 92,
+    "cgpa": 7.97,
+    "prograsivetotalearnedcredit": 66.5,
+    "earnedgradepoints": 197,
+    "prograde": 303
+   }
+  ]
+ }
+}

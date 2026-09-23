@@ -1,0 +1,31 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "registrations": [
+   {
+    "registrationcode": "2026EVESEM",
+    "registrationdesc": "2026EVESEM",
+    "registrationid": "FAKE56068EADB65B"
+   },
+   {
+    "registrationcode": "2025ODDSEM",
+    "registrationdesc": "2025ODDSEM",
+    "registrationid": "FAKE1BEC1E8530CC"
+   },
+   {
+    "registrationcode": "2025EVESEM",
+    "registrationdesc": "EVEN SEMESTER 2025 (JAN - JUNE 2025) JIIT",
+    "registrationid": "FAKE012B527128A9"
+   },
+   {
+    "registrationcode": "2024ODDSEM",
+    "registrationdesc": "2024ODDSEM",
+    "registrationid": "FAKE9AD6F8703766"
+   }
+  ]
+ }
+}

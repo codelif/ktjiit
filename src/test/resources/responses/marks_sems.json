@@ -1,0 +1,47 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "semestercode": [
+   {
+    "registrationdatefrom": 1782844200000,
+    "registrationdesc": "2026ODDSEM",
+    "registrationid": "FAKEB89B6304D1B7",
+    "registrationdateto": 1798655400000,
+    "registrationcode": "2026ODDSEM"
+   },
+   {
+    "registrationdatefrom": 1762972200000,
+    "registrationdesc": "2026EVESEM",
+    "registrationid": "FAKEA22322D29357",
+    "registrationdateto": 1788028200000,
+    "registrationcode": "2026EVESEM"
+   },
+   {
+    "registrationdatefrom": 1751308200000,
+    "registrationdesc": "2025ODDSEM",
+    "registrationid": "FAKEB7D20B9582AA",
+    "registrationdateto": 1782757800000,
+    "registrationcode": "2025ODDSEM"
+   },
+   {
+    "registrationdatefrom": 1729449000000,
+    "registrationdesc": "EVEN SEMESTER 2025 (JAN - JUNE 2025) JIIT",
+    "registrationid": "FAKE13E4859AACBE",
+    "registrationdateto": 1749407400000,
+    "registrationcode": "2025EVESEM"
+   },
+   {
+    "registrationdatefrom": 1709749800000,
+    "registrationdesc": "2024ODDSEM",
+    "registrationid": "FAKE882BAE9684C1",
+    "registrationdateto": 1767119400000,
+    "registrationcode": "2024ODDSEM"
+   }
+  ],
+  "examevent": []
+ }
+}

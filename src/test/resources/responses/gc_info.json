@@ -1,0 +1,19 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "studentinfo": {
+   "branchid": "FAKE4BC222D9D68F",
+   "branchcode": "CSE",
+   "programcode": "B.T",
+   "stymax": 5,
+   "programdesc": "BACHELOR OF TECHNOLOGY",
+   "instituteid": "FAKEF6172CB253B",
+   "branchdesc": "COMPUTER SCIENCE & ENGINEERING",
+   "programid": "FAKE16580D6646AD"
+  }
+ }
+}

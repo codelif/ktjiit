@@ -1,0 +1,159 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "studentattendancelist": [
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 63.2,
+    "Lpercentage": 63.2,
+    "individualsubjectcode": "20B13HS311",
+    "registrationid": "FAKEA5B64C881DA2",
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "INDIAN CONSTITUTION & TRADITIONAL KNOWLEDGE(20B13HS311)",
+    "subjectid": "388437",
+    "Lprepercentage": 0.0,
+    "Lsubjectcomponentid": "FAKE682C5B41CF43"
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 0.0,
+    "Lpercentage": 0.0,
+    "individualsubjectcode": "26B14CS354",
+    "registrationid": "FAKEA5B64C881DA2",
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "SCALABLE DATA SCIENCE(26B14CS354)",
+    "subjectid": "FAKEB31759A52C6E59",
+    "Lprepercentage": 0.0,
+    "Lsubjectcomponentid": "FAKE682C5B41CF43"
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 0.0,
+    "Lpercentage": 0.0,
+    "individualsubjectcode": "26B14PH311",
+    "registrationid": "FAKEA5B64C881DA2",
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "SOLID STATE PHYSICS(26B14PH311)",
+    "subjectid": "FAKE1ED5DB718949A2",
+    "Lprepercentage": 0.0,
+    "Lsubjectcomponentid": "FAKE682C5B41CF43"
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 53.8,
+    "Lpercentage": 53.8,
+    "individualsubjectcode": "26B12CS315",
+    "registrationid": "FAKEA5B64C881DA2",
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "FUNDAMENTALS OF IOT ANALYTICS(26B12CS315)",
+    "subjectid": "FAKE593DF01C6492",
+    "Lprepercentage": 0.0,
+    "Lsubjectcomponentid": "FAKE682C5B41CF43"
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 85.7,
+    "individualsubjectcode": "26B16CS315",
+    "registrationid": "FAKEA5B64C881DA2",
+    "Pprepercentage": 0.0,
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "FUNDAMENTALS OF IOT ANALYTICS LAB(26B16CS315)",
+    "Psubjectcomponentid": "FAKE4EA533315784",
+    "subjectid": "FAKE1F88F12AAFDD",
+    "Ppercentage": 85.7
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 71.4,
+    "individualsubjectcode": "26B16CS318\t",
+    "registrationid": "FAKEA5B64C881DA2",
+    "Pprepercentage": 0.0,
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "FUNDAMENTALS OF COMPUTING FOR DATA SCIENCE LAB(26B16CS318\t)",
+    "Psubjectcomponentid": "FAKE4EA533315784",
+    "subjectid": "FAKEB5C132DDF10A",
+    "Ppercentage": 71.4
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 63.6,
+    "Lpercentage": 63.6,
+    "individualsubjectcode": "24B11CS312",
+    "registrationid": "FAKEA5B64C881DA2",
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "OPERATING SYSTEMS(24B11CS312)",
+    "subjectid": "FAKEAF75732273E8",
+    "Lprepercentage": 0.0,
+    "Lsubjectcomponentid": "FAKE682C5B41CF43"
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 100.0,
+    "individualsubjectcode": "24B15CS312",
+    "registrationid": "FAKEA5B64C881DA2",
+    "Pprepercentage": 0.0,
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "OPERATING SYSTEMS LAB(24B15CS312)",
+    "Psubjectcomponentid": "FAKE4EA533315784",
+    "subjectid": "FAKE1090BD6FB91E",
+    "Ppercentage": 100.0
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 60.0,
+    "individualsubjectcode": "24B15CS314",
+    "registrationid": "FAKEA5B64C881DA2",
+    "Pprepercentage": 0.0,
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "FULL STACK DEVELOPMENT LAB(24B15CS314)",
+    "Psubjectcomponentid": "FAKE4EA533315784",
+    "subjectid": "FAKED129BBA45216",
+    "Ppercentage": 60.0
+   },
+   {
+    "LTpercantage": 71.4,
+    "individualsubjectcode": "24B11CS313",
+    "Tsubjectcomponentid": "FAKE8A817C24D727",
+    "subjectcode": "COMPUTER NETWORKS(24B11CS313)",
+    "subjectid": "FAKE273B667F9161",
+    "Lsubjectcomponentid": "FAKE682C5B41CF43",
+    "studentid": "FAKE1046AB9105E6A880",
+    "Tprepercentage": 0.0,
+    "Lpercentage": 85.7,
+    "Tpercentage": 42.9,
+    "registrationid": "FAKEA5B64C881DA2",
+    "instituteid": "FAKEAE8CCABE802",
+    "Lprepercentage": 0.0
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 71.4,
+    "individualsubjectcode": "24B15CS313",
+    "registrationid": "FAKEA5B64C881DA2",
+    "Pprepercentage": 0.0,
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "COMPUTER NETWORKS LAB(24B15CS313)",
+    "Psubjectcomponentid": "FAKE4EA533315784",
+    "subjectid": "FAKE136F1CFA4ACF",
+    "Ppercentage": 71.4
+   },
+   {
+    "studentid": "FAKE1046AB9105E6A880",
+    "LTpercantage": 0.0,
+    "individualsubjectcode": "24B17CS311",
+    "registrationid": "FAKEA5B64C881DA2",
+    "Pprepercentage": 0.0,
+    "instituteid": "FAKEAE8CCABE802",
+    "subjectcode": "SUMMER TRAINING - II(24B17CS311)",
+    "Psubjectcomponentid": "FAKE4EA533315784",
+    "subjectid": "FAKE431B5711D0BE",
+    "Ppercentage": 0.0
+   }
+  ],
+  "currentSem": "5"
+ }
+}

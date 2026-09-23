@@ -1,0 +1,13 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "loadGoogleClientId": "000000000000-test.apps.googleusercontent.com",
+  "loadGoogleButtonShow": "Y",
+  "URLapiBase": "https://webportal.jiit.ac.in:6013/CLXSSOAPI/token/generate-token-google-signin",
+  "logoClientWise": "JIIT"
+ }
+}

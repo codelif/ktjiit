@@ -1,0 +1,30 @@
+{
+ "status": {
+  "responseStatus": "Success",
+  "errors": null,
+  "identifier": null
+ },
+ "response": {
+  "presenthosteldetail": {
+   "hostellefton": null,
+   "hosteldescription": "X692EF056D393EBA607",
+   "hostelcode": "XE5E3",
+   "allotedroomno": "8234",
+   "roomid": "FAKE44A1C9F307D",
+   "roomtype": "X674",
+   "hosteltypecode": "X0BE",
+   "dateofallotment": 5903292575207,
+   "allotedtilldate": "X2D293EC6B",
+   "allotedfromdate": "X99FFC02E4",
+   "bedno": "X92E914",
+   "hostelid": "FAKEDF139B90250F",
+   "roomcode": "8897",
+   "floor": "49",
+   "hosteltypedesc": "X6D8",
+   "roomdesc": "1049",
+   "beddesc": "X05F51A",
+   "hostellertype": "XBDB"
+  },
+  "presenthostelauthoritiesdetail": []
+ }
+}
