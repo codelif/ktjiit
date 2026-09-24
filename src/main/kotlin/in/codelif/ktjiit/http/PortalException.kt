@@ -26,5 +26,8 @@ public sealed class PortalException(message: String, cause: Throwable? = null) :
 
     public class Malformed(message: String, cause: Throwable? = null) : PortalException(message, cause)
 
+    /** tls failed: an expired or wrong certificate, or something in the middle. never worth a retry */
+    public class Untrusted(cause: IOException) : PortalException(cause.message ?: "untrusted connection", cause)
+
     public class Network(cause: IOException) : PortalException(cause.message ?: "network error", cause)
 }

@@ -125,6 +125,8 @@ public class Transport(
                 Raw(code, data, conn.contentType)
             } catch (e: PortalException) {
                 throw e
+            } catch (e: javax.net.ssl.SSLException) {
+                throw PortalException.Untrusted(e)
             } catch (e: IOException) {
                 throw PortalException.Network(e)
             } finally {

@@ -163,4 +163,16 @@ class TransportTest {
         reply = Reply(417, """{"status":{"responseStatus":"Failure","errors":["NO DATA FOUND"]}}""")
         assertThrows<PortalException.PortalError> { runBlocking { transport.bytes("/f", "tok") } }
     }
+
+    @Test
+    fun `a failed tls handshake is untrusted, not offline`() {
+        // plain bytes where a server hello should be fail the handshake, the same path an expired certificate takes
+        java.net.ServerSocket(0, 1, java.net.InetAddress.getLoopbackAddress()).use { plain ->
+            Thread { runCatching { plain.accept().use { it.getOutputStream().write("HTTP/1.1 400 Bad Request\r\n\r\n".toByteArray()) } } }.start()
+            val https = Transport("https://127.0.0.1:${plain.localPort}/api", PortalClock { Instant.now() }, retryDelaysMs = listOf(1, 1))
+            assertThrows<PortalException.Untrusted> {
+                runBlocking { https.post("/x", "tok", buildJsonObject { put("instituteid", "I1") }, false) }
+            }
+        }
+    }
 }
