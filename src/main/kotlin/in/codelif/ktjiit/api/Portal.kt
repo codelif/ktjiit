@@ -170,6 +170,31 @@ public class Portal(public val session: Session, private val transport: Transpor
         call("/studentfeeledger/loadfeesummary", encrypt = false) { put("instituteid", iid) }
     }
 
+    // registration, read only
+
+    public suspend fun choiceSemesters(): List<Semester> = listOrEmpty(emptyList()) {
+        call<ChoiceSemestersResponse>("/studentchoiceprint/getsemestercodelist", encrypt = true) {}.registrationcodelist
+    }
+
+    public suspend fun subjectChoices(semester: Semester): List<SubjectChoice> = listOrEmpty(emptyList()) {
+        call<SubjectChoicesResponse>("/studentchoiceprint/getsubjectpreference", encrypt = true) {
+            put("instituteid", iid)
+            put("clientid", session.clientId)
+            put("registrationid", semester.id)
+        }.subjectpreferencegrid
+    }
+
+    public suspend fun moocSemesters(): List<Semester> = listOrEmpty(emptyList()) {
+        call("/moocsubjectstatus/getsemestercodelist", encrypt = false) { put("instituteid", iid) }
+    }
+
+    public suspend fun moocStatus(semester: Semester): MoocStatus = listOrEmpty(MoocStatus()) {
+        call("/moocsubjectstatus/getsubjectstatus", encrypt = false) {
+            put("instituteid", iid)
+            put("registrationid", semester.id)
+        }
+    }
+
     public suspend fun feedbackEvents(): List<FeedbackEvent> = listOrEmpty(emptyList()) {
         call<FeedbackEventsResponse>("/feedbackformcontroller/getFeedbackEvent", encrypt = false) {
             put("instituteid", iid)
