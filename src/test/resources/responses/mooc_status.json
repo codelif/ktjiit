@@ -1,0 +1,15 @@
+{
+ "status": {"responseStatus": "Success", "errors": null, "identifier": null},
+ "response": {
+  "lockFlag": true,
+  "totalsubjectDetailList": [
+   {"choicetype": "CURRENT Againts(26B12CS318-FUNDAMENTALS OF TEST-DRIVEN THINGS)", "approvalstatus": "D", "count": 4, "subjectcode": "NOC26CS001", "subjectid": "SUB000000000000001", "subjectdesc": "TEST MOOC COURSE",
+    "totalStages": ["Submitted on 24-Jul-2026 12:29 PM@D", "1. Review  Date:- 30-Jul-2026 02:31 PM  by ALPHA  REVIEWER (REVIEW BY MOOCD )@D", "", "3. Approved  Date:- 07-Aug-2026 04:53 PM  by GAMMA APPROVER (Approved By VC or Admin )@D"]},
+   {"choicetype": "CURRENT Againts(24B12HS213-TEST HUMANITIES)", "approvalstatus": "P", "count": 4, "subjectcode": "NOC26HS002", "subjectid": "SUB000000000000002", "subjectdesc": "SECOND MOOC",
+    "totalStages": ["Submitted on 12-Jan-2026 01:00 PM@D", "1. Review@P", "", ""]}
+  ],
+  "totalRejsubjectDetailList": [],
+  "duesAmount": 0,
+  "onlyapprovedbyvc": "N"
+ }
+}

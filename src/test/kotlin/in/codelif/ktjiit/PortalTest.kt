@@ -53,6 +53,10 @@ class PortalTest {
         "/myhostelallocationdetail/gethostelallocationdetail" to ("hostel" to false),
         "/studentfeeledger/loadfeesummary" to ("fees" to false),
         "/feedbackformcontroller/getFeedbackEvent" to ("fb_events" to false),
+        "/studentchoiceprint/getsemestercodelist" to ("choice_sems" to true),
+        "/studentchoiceprint/getsubjectpreference" to ("choices" to true),
+        "/moocsubjectstatus/getsemestercodelist" to ("mooc_sems" to false),
+        "/moocsubjectstatus/getsubjectstatus" to ("mooc_status" to false),
         "/feedbackformcontroller/getGriddataForFeedback" to ("fb_grid" to true),
         "/feedbackformcontroller/getIemQuestion" to ("fb_questions" to false),
         "/feedbackformcontroller/savedatalist" to ("fb_save" to true),
@@ -190,5 +194,32 @@ class PortalTest {
         assertEquals(listOf("Q1", "Q2"), qs.map { it["questionid"]!!.jsonPrimitive.content })
         assertTrue(qs.all { it["rating"]!!.jsonPrimitive.content == "VERY_GOOD" })
         assertEquals(JsonPrimitive(2), qs[1]["sequence"])
+    }
+
+    @Test
+    fun registration() = runBlocking {
+        val sems = portal.choiceSemesters()
+        assertEquals(listOf("2026ODDSEM", "2026EVESEM"), sems.map { it.code })
+        assertTrue(seen["/studentchoiceprint/getsemestercodelist"]!!.isEmpty())
+        val choices = portal.subjectChoices(sems.first())
+        assertEquals(setOf("instituteid", "clientid", "registrationid"), seen["/studentchoiceprint/getsubjectpreference"]!!.keys)
+        val de = choices.filter { it.basket == "DE-2" }.sortedBy { it.preference }
+        assertEquals("FIRST PICK", de.first().name)
+        assertTrue(de.first().isAllotted && de.first().isElective)
+        assertTrue(!de.last().isAllotted)
+
+        val mooc = portal.moocStatus(portal.moocSemesters().single())
+        assertEquals(setOf("instituteid", "registrationid"), seen["/moocsubjectstatus/getsubjectstatus"]!!.keys)
+        val done = mooc.requests.first()
+        assertEquals("26B12CS318" to "FUNDAMENTALS OF TEST-DRIVEN THINGS", done.replaces)
+        assertEquals(listOf("Submitted", "Review", "Approved"), done.stages.map { it.title })
+        assertEquals(LocalDate.of(2026, 7, 30), done.stages[1].at!!.toLocalDate())
+        assertEquals("ALPHA REVIEWER", done.stages[1].by)
+        assertNull(done.stages[0].by)
+        assertTrue(done.isApproved)
+        val waiting = mooc.requests.last()
+        assertEquals(listOf(true, false), waiting.stages.map { it.done })
+        assertEquals("Review", waiting.stages[1].title)
+        assertTrue(!waiting.isApproved)
     }
 }

@@ -1,0 +1,11 @@
+{
+ "status": {"responseStatus": "Success", "errors": null, "identifier": null},
+ "response": {
+  "total": 22.0,
+  "subjectpreferencegrid": [
+   {"academicyear": "2425", "subjecttypedesc": "Core", "subjectcode": "26B11CS111", "running": "Y", "subjectrunning": "Y", "basketdesc": "Core", "basketcode": "CORE", "credits": 4.0, "preference": 1, "maxsubject": 1, "finalizedcount": 0, "subjectdesc": "TEST CORE SUBJECT", "auditsubject": "N", "electivetype": "N", "subjecttype": "C", "freezeddatetime": "24-07-2026 12:29 PM", "studentname": "TEST NAME", "registrationno": "E1", "stynumber": 5},
+   {"academicyear": "2425", "subjecttypedesc": "Departmental Electives", "subjectcode": "26B12CS311", "running": "N", "subjectrunning": "N", "basketdesc": "DE-2", "basketcode": "DE-2", "credits": 3.0, "preference": 2, "maxsubject": 1, "finalizedcount": 1, "subjectdesc": "SECOND PICK", "auditsubject": "N", "electivetype": "Y", "subjecttype": "E", "freezeddatetime": "24-07-2026 12:29 PM", "studentname": "TEST NAME", "registrationno": "E1", "stynumber": 5},
+   {"academicyear": "2425", "subjecttypedesc": "Departmental Electives", "subjectcode": "26B12CS312", "running": "Y", "subjectrunning": "Y", "basketdesc": "DE-2", "basketcode": "DE-2", "credits": 3.0, "preference": 1, "maxsubject": 1, "finalizedcount": 1, "subjectdesc": "FIRST PICK", "auditsubject": "N", "electivetype": "Y", "subjecttype": "E", "freezeddatetime": "24-07-2026 12:29 PM", "studentname": "TEST NAME", "registrationno": "E1", "stynumber": 5}
+  ]
+ }
+}

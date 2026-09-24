@@ -1,0 +1,11 @@
+{
+ "status": {"responseStatus": "Success", "errors": null, "identifier": null},
+ "response": {
+  "name": "TEST NAME",
+  "registrationcodelist": [
+   {"registrationid": "REG2026ODD00001", "registrationcode": "2026ODDSEM", "preventfreezed": "Y"},
+   {"registrationid": "REG2026EVE00001", "registrationcode": "2026EVESEM", "preventfreezed": "Y"}
+  ],
+  "registrationnumber": "E1"
+ }
+}

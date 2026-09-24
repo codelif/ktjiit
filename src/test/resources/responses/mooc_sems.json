@@ -1,0 +1,6 @@
+{
+ "status": {"responseStatus": "Success", "errors": null, "identifier": null},
+ "response": [
+  {"registrationid": "REG2026ODD00001", "registrationdatefrom": 1783814400000, "registrationcode": "2026ODDSEM", "registrationdesc": "2026ODDSEM"}
+ ]
+}
