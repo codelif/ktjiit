@@ -68,6 +68,9 @@ public data class ClassRecord(
     @SerialName("attendancestatus") val status: String = "",
 ) {
     public val isPresent: Boolean get() = present.equals("Present", ignoreCase = true)
+
+    /** the portal leaves these out of the class count, so only a present one moves the percentage */
+    public val isExtra: Boolean get() = classType.equals("Extra", ignoreCase = true)
     public val date: LocalDate? get() = parsed?.first
     public val start: LocalTime? get() = parsed?.second
     public val end: LocalTime? get() = parsed?.third
@@ -98,6 +101,9 @@ public data class ClassRecord(
 public data class DailyAttendance(
     @SerialName("studentAttdsummarylist") val classes: List<ClassRecord> = emptyList(),
 ) {
+    /** every present class, extras included, same as the portal's percentage */
     public val attended: Int get() = classes.count { it.isPresent }
-    public val total: Int get() = classes.size
+
+    /** regular classes only, an extra never adds to the bottom of the fraction */
+    public val total: Int get() = classes.count { !it.isExtra }
 }
