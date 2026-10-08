@@ -39,27 +39,26 @@ public data class ExamSlot(
     public val seated: Boolean get() = room.isNotBlank() || seat.isNotBlank()
 
     private val window by lazy(LazyThreadSafetyMode.NONE) {
-        val start = clocks(from).firstOrNull() ?: clocks(until).firstOrNull()
-        start to clocks(until).lastOrNull()?.takeIf { start == null || it > start }
-    }
-
-    internal companion object {
-        // 03:30 pm, 3:30PM, 09:00:AM, 14:00, 14:00:00
-        private val CLOCK = Regex("""(\d{1,2})[:.](\d{2})(?::\d{2})?(?:\s*:?\s*([ap])\.?m\b\.?)?""", RegexOption.IGNORE_CASE)
-
-        fun clocks(s: String): List<LocalTime> = CLOCK.findAll(s).mapNotNull { m ->
-            val h = m.groupValues[1].toInt()
-            val min = m.groupValues[2].toInt()
-            val hour = when (m.groupValues[3].lowercase()) {
-                "" -> h
-                "a" -> if (h == 12) 0 else h
-                else -> if (h == 12) 12 else h + 12
-            }
-            val twelve = m.groupValues[3].isEmpty() || h in 1..12
-            if (twelve && hour in 0..23 && min in 0..59) LocalTime.of(hour, min) else null
-        }.toList()
+        val start = parseClocks(from).firstOrNull() ?: parseClocks(until).firstOrNull()
+        start to parseClocks(until).lastOrNull()?.takeIf { start == null || it > start }
     }
 }
+
+// 03:30 pm, 3:30PM, 09:00:AM, 14:00, 14:00:00
+private val CLOCK = Regex("""(\d{1,2})[:.](\d{2})(?::\d{2})?(?:\s*:?\s*([ap])\.?m\b\.?)?""", RegexOption.IGNORE_CASE)
+
+/** every clock time in a portal string, in order. not a companion: that would hide the serializer */
+internal fun parseClocks(s: String): List<LocalTime> = CLOCK.findAll(s).mapNotNull { m ->
+    val h = m.groupValues[1].toInt()
+    val min = m.groupValues[2].toInt()
+    val hour = when (m.groupValues[3].lowercase()) {
+        "" -> h
+        "a" -> if (h == 12) 0 else h
+        else -> if (h == 12) 12 else h + 12
+    }
+    val twelve = m.groupValues[3].isEmpty() || h in 1..12
+    if (twelve && hour in 0..23 && min in 0..59) LocalTime.of(hour, min) else null
+}.toList()
 
 @Serializable
 internal data class ExamSemestersResponse(val semesterCodeinfo: Inner = Inner()) {

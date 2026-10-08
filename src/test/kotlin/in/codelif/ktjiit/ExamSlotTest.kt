@@ -1,6 +1,7 @@
 package `in`.codelif.ktjiit
 
 import `in`.codelif.ktjiit.model.ExamSlot
+import `in`.codelif.ktjiit.model.parseClocks
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test
@@ -11,14 +12,14 @@ class ExamSlotTest {
 
     @Test
     fun `every clock shape the portal has used`() {
-        assertEquals(listOf(t(15, 30)), ExamSlot.clocks("03:30 pm"))
-        assertEquals(listOf(t(15, 30)), ExamSlot.clocks("3:30PM"))
-        assertEquals(listOf(t(9)), ExamSlot.clocks("09:00:AM"))
-        assertEquals(listOf(t(14)), ExamSlot.clocks("14:00"))
-        assertEquals(listOf(t(14)), ExamSlot.clocks("14:00:00"))
-        assertEquals(listOf(t(0, 15), t(12, 45)), ExamSlot.clocks("12:15 am to 12:45 PM"))
-        assertEquals(emptyList<LocalTime>(), ExamSlot.clocks("TBA"))
-        assertEquals(emptyList<LocalTime>(), ExamSlot.clocks("14:00 pm"))
+        assertEquals(listOf(t(15, 30)), parseClocks("03:30 pm"))
+        assertEquals(listOf(t(15, 30)), parseClocks("3:30PM"))
+        assertEquals(listOf(t(9)), parseClocks("09:00:AM"))
+        assertEquals(listOf(t(14)), parseClocks("14:00"))
+        assertEquals(listOf(t(14)), parseClocks("14:00:00"))
+        assertEquals(listOf(t(0, 15), t(12, 45)), parseClocks("12:15 am to 12:45 PM"))
+        assertEquals(emptyList<LocalTime>(), parseClocks("TBA"))
+        assertEquals(emptyList<LocalTime>(), parseClocks("14:00 pm"))
     }
 
     @Test
