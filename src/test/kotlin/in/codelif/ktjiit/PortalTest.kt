@@ -18,6 +18,7 @@ import `in`.codelif.ktjiit.model.FeedbackEvent
 import `in`.codelif.ktjiit.model.Rating
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -43,6 +44,7 @@ class PortalTest {
         "/feedbackformcontroller/getCreadits" to ("credits" to false),
         "/studentcommonsontroller/getsemestercode-withstudentexamevents" to ("exam_sems" to true),
         "/studentcommonsontroller/getstudentexamevents" to ("exam_events" to true),
+        "/studentsttattview/getstudent-examschedule" to ("exam_schedule" to true),
         "/studentcommonsontroller/getsemestercode-exammarks" to ("marks_sems" to true),
         "/studentgradecard/getregistrationList" to ("gc_regs" to true),
         "/studentgradecard/getstudentinfo" to ("gc_info" to true),
@@ -132,6 +134,18 @@ class PortalTest {
         assertEquals("TEST-1", ev.code)
         assertNotNull(ev.from)
         assertTrue(seen["/studentcommonsontroller/getstudentexamevents"]!!.containsKey("registationid"))
+
+        val (seated, pending) = portal.examSchedule(ev)
+        assertEquals(LocalDate.of(2026, 10, 12), seated.day)
+        assertEquals(LocalTime.of(15, 30), seated.start)
+        assertEquals(LocalTime.of(16, 30), seated.end)
+        assertEquals("INDIAN CONSTITUTION & TRADITIONAL KNOWLEDGE", seated.subjectName)
+        assertEquals("CR-4" to "B12", seated.room to seated.seat)
+        assertTrue(seated.seated)
+        // room and seat come out a day before, null until then
+        assertEquals("" to "", pending.room to pending.seat)
+        assertFalse(pending.seated)
+        assertEquals(LocalTime.of(13, 0), pending.start)
     }
 
     @Test
