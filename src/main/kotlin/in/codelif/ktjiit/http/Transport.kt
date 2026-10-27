@@ -8,6 +8,7 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonPrimitive
@@ -157,7 +158,10 @@ public class Transport(
         val state = status?.get("responseStatus")?.jsonPrimitive?.contentOrNull
         if (state == "Success" && raw.code < 400) return root["response"] ?: JsonNull
 
-        if (raw.code >= 500 && status == null) throw PortalException.ServerUnavailable(raw.code, shape)
+        if (raw.code >= 500 && status == null) {
+            fun field(k: String) = (root[k] as? JsonPrimitive)?.contentOrNull
+            throw PortalException.ServerError(raw.code, shape, field("error"), field("message"))
+        }
         val errors = runCatching {
             status?.get("errors")?.jsonArray?.mapNotNull { it.jsonPrimitive.contentOrNull }
         }.getOrNull().orEmpty()

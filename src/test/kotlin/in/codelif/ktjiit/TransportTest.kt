@@ -143,6 +143,25 @@ class TransportTest {
     }
 
     @Test
+    fun `spring's error page is a server error, not retried`() {
+        var calls = 0
+        server.removeContext("/")
+        server.createContext("/") { ex ->
+            calls++
+            ex.requestBody.readBytes()
+            val bytes = """{"timestamp":"2026-10-27T15:58:00.000+00:00","status":500,"error":"Internal Server Error","message":"JSON parse error","path":"/StudentPortalAPI/x"}""".toByteArray()
+            ex.responseHeaders.add("Content-Type", "application/json;charset=UTF-8")
+            ex.sendResponseHeaders(500, bytes.size.toLong())
+            ex.responseBody.use { it.write(bytes) }
+        }
+        val e = assertThrows<PortalException.ServerError> { post() }
+        assertEquals(1, calls)
+        assertEquals(500, e.code)
+        assertEquals("Internal Server Error", e.error)
+        assertEquals("JSON parse error", e.detail)
+    }
+
+    @Test
     fun `non json 200 is malformed`() {
         reply = Reply(200, "<html>hi</html>", type = "text/html")
         assertThrows<PortalException.Malformed> { post() }

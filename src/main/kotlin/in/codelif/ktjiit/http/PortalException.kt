@@ -13,6 +13,10 @@ public sealed class PortalException(message: String, cause: Throwable? = null) :
     public class ServerUnavailable(public val code: Int, public val shape: String = "") :
         PortalException("server unavailable ($code)")
 
+    /** 5xx with spring's error page instead of an envelope: the server is up, this request blew up in it */
+    public class ServerError(public val code: Int, public val shape: String, public val error: String?, public val detail: String?) :
+        PortalException("server error ($code)")
+
     /** 200 with nothing in it, what you get for a bad LocalName */
     public class EmptyResponse : PortalException("empty response")
 
