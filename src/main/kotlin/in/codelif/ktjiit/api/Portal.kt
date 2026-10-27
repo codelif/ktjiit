@@ -42,7 +42,7 @@ public class Portal(public val session: Session, private val transport: Transpor
 
     public suspend fun attendance(semester: Semester, semesterNumber: String): AttendanceDetail =
         listOrEmpty(AttendanceDetail()) {
-            call("/StudentClassAttendance/getstudentattendancedetail", encrypt = true) {
+            call("/StudentClassAttendance/getstudentattendancedetail", encrypt = false) {
                 put("instituteid", iid)
                 put("registrationcode", semester.code)
                 put("registrationid", semester.id)
@@ -56,7 +56,7 @@ public class Portal(public val session: Session, private val transport: Transpor
         subject: SubjectAttendance,
         components: List<String> = subject.components,
     ): DailyAttendance = listOrEmpty(DailyAttendance()) {
-        call("/StudentClassAttendance/getstudentsubjectpersentage", encrypt = true) {
+        call("/StudentClassAttendance/getstudentsubjectpersentage", encrypt = false) {
             put("instituteid", iid)
             put("subjectid", subject.subjectId)
             put("registrationid", semester.id)
@@ -69,10 +69,10 @@ public class Portal(public val session: Session, private val transport: Transpor
     // subjects
 
     public suspend fun subjectSemesters(): List<Semester> =
-        call<RegistrationsResponse>("/reqsubfaculty/getregistrationList", encrypt = true) { put("instituteid", iid) }.registrations
+        call<RegistrationsResponse>("/reqsubfaculty/getregistrationList", encrypt = false) { put("instituteid", iid) }.registrations
 
     public suspend fun registeredSubjects(semester: Semester): RegisteredSubjects = listOrEmpty(RegisteredSubjects()) {
-        call("/reqsubfaculty/getfaculties", encrypt = true) {
+        call("/reqsubfaculty/getfaculties", encrypt = false) {
             put("studentid", session.memberId)
             put("instituteid", iid)
             put("registrationid", semester.id)
@@ -85,21 +85,21 @@ public class Portal(public val session: Session, private val transport: Transpor
     // exams
 
     public suspend fun examSemesters(): List<Semester> = listOrEmpty(emptyList()) {
-        call<ExamSemestersResponse>("/studentcommonsontroller/getsemestercode-withstudentexamevents", encrypt = true) {
+        call<ExamSemestersResponse>("/studentcommonsontroller/getsemestercode-withstudentexamevents", encrypt = false) {
             put("clientid", session.clientId)
             put("instituteid", iid)
         }.semesterCodeinfo.semestercode
     }
 
     public suspend fun examEvents(semester: Semester): List<ExamEvent> = listOrEmpty(emptyList()) {
-        call<ExamEventsResponse>("/studentcommonsontroller/getstudentexamevents", encrypt = true) {
+        call<ExamEventsResponse>("/studentcommonsontroller/getstudentexamevents", encrypt = false) {
             put("instituteid", iid)
             put("registationid", semester.id)
         }.eventcode.examevent
     }
 
     public suspend fun examSchedule(event: ExamEvent): List<ExamSlot> = listOrEmpty(emptyList()) {
-        call<ExamScheduleResponse>("/studentsttattview/getstudent-examschedule", encrypt = true) {
+        call<ExamScheduleResponse>("/studentsttattview/getstudent-examschedule", encrypt = false) {
             put("instituteid", iid)
             put("exameventid", event.id)
             put("registrationid", event.semesterId)
@@ -109,7 +109,7 @@ public class Portal(public val session: Session, private val transport: Transpor
     // marks
 
     public suspend fun marksSemesters(): List<Semester> = listOrEmpty(emptyList()) {
-        call<MarksSemestersResponse>("/studentcommonsontroller/getsemestercode-exammarks", encrypt = true) {
+        call<MarksSemestersResponse>("/studentcommonsontroller/getsemestercode-exammarks", encrypt = false) {
             put("instituteid", iid)
         }.semestercode
     }
@@ -124,19 +124,19 @@ public class Portal(public val session: Session, private val transport: Transpor
         transport.post("/studentsexamview/getstudent-exammarks", session.token, buildJsonObject {
             put("instituteid", iid)
             put("registrationid", semester.id)
-        }, encrypt = true)
+        }, encrypt = false)
 
     // grades
 
     public suspend fun gradeCardSemesters(): List<Semester> = listOrEmpty(emptyList()) {
-        call<RegistrationsResponse>("/studentgradecard/getregistrationList", encrypt = true) { put("instituteid", iid) }.registrations
+        call<RegistrationsResponse>("/studentgradecard/getregistrationList", encrypt = false) { put("instituteid", iid) }.registrations
     }
 
     public suspend fun program(): StudentProgram =
-        call<StudentProgramResponse>("/studentgradecard/getstudentinfo", encrypt = true) { put("instituteid", iid) }.studentinfo
+        call<StudentProgramResponse>("/studentgradecard/getstudentinfo", encrypt = false) { put("instituteid", iid) }.studentinfo
 
     public suspend fun gradeCard(semester: Semester, program: StudentProgram): GradeCard = listOrEmpty(GradeCard()) {
-        call("/studentgradecard/showstudentgradecard", encrypt = true) {
+        call("/studentgradecard/showstudentgradecard", encrypt = false) {
             put("instituteid", iid)
             put("registrationid", semester.id)
             put("branchid", program.branchId)
@@ -146,7 +146,7 @@ public class Portal(public val session: Session, private val transport: Transpor
 
     /** sgpa/cgpa for every finished semester */
     public suspend fun semesterResults(currentSemester: String): List<SemesterResult> = listOrEmpty(emptyList()) {
-        call<SemesterResultsResponse>("/studentsgpacgpa/getallsemesterdata", encrypt = true) {
+        call<SemesterResultsResponse>("/studentsgpacgpa/getallsemesterdata", encrypt = false) {
             put("instituteid", iid)
             put("studentid", session.memberId)
             put("stynumber", currentSemester)
@@ -159,7 +159,7 @@ public class Portal(public val session: Session, private val transport: Transpor
         call("/studentpersinfo/getstudent-personalinformation", encrypt = false) { put("instituteid", iid) }
 
     public suspend fun bankInfo(): BankInfo =
-        call<BankResponse>("/studentbankdetails/getstudentbankinfo", encrypt = true) { put("instituteid", iid) }.bankinfo
+        call<BankResponse>("/studentbankdetails/getstudentbankinfo", encrypt = false) { put("instituteid", iid) }.bankinfo
 
     public suspend fun hostel(): HostelInfo? = listOrEmpty(null) {
         call<HostelResponse>("/myhostelallocationdetail/gethostelallocationdetail", encrypt = false) { put("instituteid", iid) }
@@ -173,11 +173,11 @@ public class Portal(public val session: Session, private val transport: Transpor
     // registration, read only
 
     public suspend fun choiceSemesters(): List<Semester> = listOrEmpty(emptyList()) {
-        call<ChoiceSemestersResponse>("/studentchoiceprint/getsemestercodelist", encrypt = true) {}.registrationcodelist
+        call<ChoiceSemestersResponse>("/studentchoiceprint/getsemestercodelist", encrypt = false) {}.registrationcodelist
     }
 
     public suspend fun subjectChoices(semester: Semester): List<SubjectChoice> = listOrEmpty(emptyList()) {
-        call<SubjectChoicesResponse>("/studentchoiceprint/getsubjectpreference", encrypt = true) {
+        call<SubjectChoicesResponse>("/studentchoiceprint/getsubjectpreference", encrypt = false) {
             put("instituteid", iid)
             put("clientid", session.clientId)
             put("registrationid", semester.id)
@@ -204,7 +204,7 @@ public class Portal(public val session: Session, private val transport: Transpor
 
     /** every teacher and component still to be rated in an open feedback event */
     public suspend fun feedbackGrid(event: FeedbackEvent): List<FeedbackRow> = listOrEmpty(emptyList()) {
-        call<FeedbackGridResponse>("/feedbackformcontroller/getGriddataForFeedback", encrypt = true) {
+        call<FeedbackGridResponse>("/feedbackformcontroller/getGriddataForFeedback", encrypt = false) {
             put("instituteid", iid)
             put("studentid", session.memberId)
             put("eventid", event.id)
@@ -229,7 +229,7 @@ public class Portal(public val session: Session, private val transport: Transpor
         if (questions.isEmpty()) throw PortalException.PortalError(listOf("no questions for ${row.subjectCode}"), 0)
         return transport.post(
             "/feedbackformcontroller/savedatalist", session.token,
-            feedbackPayload(iid, session.memberId, event, row, questions, rating), encrypt = true, retry = false,
+            feedbackPayload(iid, session.memberId, event, row, questions, rating), encrypt = false, retry = false,
         )
     }
 
