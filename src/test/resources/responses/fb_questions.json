@@ -1,9 +1,10 @@
 {
  "status": {"responseStatus": "Success", "errors": null, "identifier": null},
  "response": {
+  "ratings": ["UNSATISFIED", "SATISFIED", "GOOD", "VERY GOOD", "EXCELLENT"],
   "questionList": [
-   {"questionid": "Q1", "questiondescription": "Explains clearly", "rating": null},
-   {"questionid": "Q2", "questiondescription": "Is on time", "sequence": 2}
+   {"eventid": "EV1", "questionid": "Q1", "subjective": "N", "ratingmap": {"UNSATISFIED": "UNSATISFIED", "VERY GOOD": "VERY GOOD", "GOOD": "GOOD", "EXCELLENT": "EXCELLENT", "SATISFIED": "SATISFIED"}, "ratingid": "RATING1", "rating": "", "instituteid": "I1", "questionbody": "Explains clearly", "applicablefor": "L,P", "evaluationguideline": null, "headid": "HEAD1"},
+   {"eventid": "EV1", "questionid": "Q2", "subjective": "N", "ratingmap": {"UNSATISFIED": "UNSATISFIED", "VERY GOOD": "VERY GOOD", "GOOD": "GOOD", "EXCELLENT": "EXCELLENT", "SATISFIED": "SATISFIED"}, "ratingid": "RATING1", "rating": "", "instituteid": "I1", "questionbody": "Is on time", "applicablefor": "L,P", "evaluationguideline": null, "headid": "HEAD1", "sequence": 2}
   ]
  }
 }
