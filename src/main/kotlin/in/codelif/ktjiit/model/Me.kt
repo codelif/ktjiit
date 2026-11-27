@@ -147,10 +147,10 @@ public class FeedbackRow(public val raw: JsonObject) {
     private fun text(key: String) = (raw[key] as? JsonPrimitive)?.contentOrNull.orEmpty()
     public val facultyName: String get() = text("employeename")
     public val subjectCode: String get() = text("subjectcode")
-    public val subjectName: String get() = text("subjectdescription")
+    public val subjectName: String get() = text("subjectdesc")
     /** L, T or P */
     public val component: String get() = text("subjectcomponentcode")
-    public val key: String get() = listOf("employeeid", "subjectid", "subjectcomponentid").joinToString("/") { text(it) }
+    public val key: String get() = listOf("registrationid", "employeeid", "subjectid", "subjectcomponentid").joinToString("/") { text(it) }
 }
 
 @Serializable
@@ -159,5 +159,7 @@ internal data class FeedbackGridResponse(val gridData: List<JsonObject> = emptyL
 @Serializable
 internal data class FeedbackQuestionsResponse(val questionList: List<JsonObject> = emptyList())
 
-/** the portal's five answers, worst to best. every question of a form gets the same one */
-public enum class Rating { UNSATISFIED, SATISFIED, GOOD, VERY_GOOD, EXCELLENT }
+/** the portal's five answers, worst to best. [value] is deliberately not always the enum name. */
+public enum class Rating(public val value: String) {
+    UNSATISFIED("UNSATISFIED"), SATISFIED("SATISFIED"), GOOD("GOOD"), VERY_GOOD("VERY GOOD"), EXCELLENT("EXCELLENT")
+}

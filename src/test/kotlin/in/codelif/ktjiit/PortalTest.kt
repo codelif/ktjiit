@@ -181,32 +181,40 @@ class PortalTest {
         val ev = FeedbackEvent("EV1", "ODD 2026 FEEDBACK", "FB1")
         val rows = portal.feedbackGrid(ev)
         assertEquals(2, rows.size)
+        assertEquals(listOf("TEST TEACHER", "OTHER TEACHER"), rows.map { it.facultyName })
         val row = rows.first()
         assertEquals("TEST TEACHER", row.facultyName)
+        assertEquals("TEST SUBJECT", row.subjectName)
         assertEquals("L", row.component)
         assertEquals(setOf("instituteid", "studentid", "eventid"), seen["/feedbackformcontroller/getGriddataForFeedback"]!!.keys)
 
         portal.submitFeedback(ev, row, Rating.VERY_GOOD)
         val q = seen["/feedbackformcontroller/getIemQuestion"]!!
         assertEquals(
-            setOf("instituteid", "eventid", "eventdescription", "facultyid", "facultyname", "registrationid", "studentid",
-                "subjectcode", "subjectcomponentcode", "subjectcomponentid", "subjectdescription", "subjectid"),
+            setOf("instituteid", "studentid", "eventid", "eventdescription", "feedbackcode", "gridDataAcademicYearAndProgramWise",
+                "facultyid", "facultyname", "registrationid", "subjectcode", "subjectcomponentcode", "subjectcomponentid", "subjectdesc", "subjectid"),
             q.keys,
         )
         assertEquals("EMP0001", q["facultyid"]!!.jsonPrimitive.content)
+        assertEquals("TEST SUBJECT", q["subjectdesc"]!!.jsonPrimitive.content)
 
         val save = seen["/feedbackformcontroller/savedatalist"]!!
         assertEquals(
-            setOf("instituteid", "studentid", "eventid", "subjectid", "facultyid", "registrationid", "questionid", "facultycomments", "coursecomments"),
+            setOf("instituteid", "studentid", "eventid", "subjectid", "facultyid", "registrationid", "questionid", "facultycomments",
+                "coursecomments", "qualifyingExamList", "appearedForExam", "additionalSuggestions"),
             save.keys,
         )
         // ids go back with the type they came in
         assertEquals(JsonPrimitive(1001), save["registrationid"])
         assertEquals("M1", save["studentid"]!!.jsonPrimitive.content)
         assertEquals(JsonNull, save["facultycomments"])
+        assertEquals("N", save["appearedForExam"]!!.jsonPrimitive.content)
+        assertEquals(1, save["qualifyingExamList"]!!.jsonArray.size)
         val qs = save["questionid"]!!.jsonArray.map { it.jsonObject }
         assertEquals(listOf("Q1", "Q2"), qs.map { it["questionid"]!!.jsonPrimitive.content })
-        assertTrue(qs.all { it["rating"]!!.jsonPrimitive.content == "VERY_GOOD" })
+        assertTrue(qs.all { it["rating"]!!.jsonPrimitive.content == "VERY GOOD" })
+        assertTrue(qs.all { it["ratingid"]!!.jsonPrimitive.content == "RATING1" })
+        assertTrue(qs.all { it["applicablefor"]!!.jsonPrimitive.content == "L,P" })
         assertEquals(JsonPrimitive(2), qs[1]["sequence"])
     }
 

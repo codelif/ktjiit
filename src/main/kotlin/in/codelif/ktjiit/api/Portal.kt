@@ -14,6 +14,7 @@ import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.add
 import kotlinx.serialization.json.addJsonObject
 import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.decodeFromJsonElement
 import kotlinx.serialization.json.put
 import kotlinx.serialization.json.putJsonArray
@@ -208,16 +209,19 @@ public class Portal(public val session: Session, private val transport: Transpor
             put("instituteid", iid)
             put("studentid", session.memberId)
             put("eventid", event.id)
-        }.gridData.map(::FeedbackRow)
+        }.gridData.filter { it["feedbackdate"] == JsonNull }.map(::FeedbackRow)
     }
 
-    /** the form for one row. jsjiit's shape, the portal's own screen isn't in the bundle we have */
+    /** fetches the form using the same row projection as the portal's feedback dialog */
     public suspend fun feedbackQuestions(event: FeedbackEvent, row: FeedbackRow): List<JsonObject> =
         call<FeedbackQuestionsResponse>("/feedbackformcontroller/getIemQuestion", encrypt = false) {
             put("instituteid", iid)
+            put("studentid", session.memberId)
             put("eventid", event.id)
             put("eventdescription", event.description)
-            for ((to, from) in QUESTION_KEYS) put(to, row.raw[from] ?: JsonNull)
+            put("feedbackcode", event.code)
+            put("gridDataAcademicYearAndProgramWise", 0)
+            for ((to, from) in QUESTION_KEYS) row.raw[from]?.let { put(to, it) }
         }.questionList
 
     /**
@@ -227,18 +231,31 @@ public class Portal(public val session: Session, private val transport: Transpor
     public suspend fun submitFeedback(event: FeedbackEvent, row: FeedbackRow, rating: Rating): JsonElement {
         val questions = feedbackQuestions(event, row)
         if (questions.isEmpty()) throw PortalException.PortalError(listOf("no questions for ${row.subjectCode}"), 0)
-        return transport.post(
-            "/feedbackformcontroller/savedatalist", session.token,
-            feedbackPayload(iid, session.memberId, event, row, questions, rating), encrypt = false, retry = false,
-        )
+        return try {
+            transport.post(
+                "/feedbackformcontroller/savedatalist", session.token,
+                feedbackPayload(iid, session.memberId, event, row, questions, rating), encrypt = false, retry = false,
+            )
+        } catch (e: PortalException) {
+            if (e !is PortalException.Network && e !is PortalException.EmptyResponse) throw e
+            // A write response can be lost after the server commits it. Reconcile before exposing a retry.
+            val stillPending = try {
+                feedbackGrid(event).any { it.key == row.key }
+            } catch (_: PortalException) {
+                throw e
+            }
+            if (stillPending) throw e
+            JsonPrimitive("Success")
+        }
     }
 
     private companion object {
-        // question payload key to grid key, as jsjiit maps them
+        // question payload key to grid key, as the current portal dialog maps them
         val QUESTION_KEYS = listOf(
             "facultyid" to "employeeid", "facultyname" to "employeename", "registrationid" to "registrationid",
-            "studentid" to "studentid", "subjectcode" to "subjectcode", "subjectcomponentcode" to "subjectcomponentcode",
-            "subjectcomponentid" to "subjectcomponentid", "subjectdescription" to "subjectdescription", "subjectid" to "subjectid",
+            "subjectcode" to "subjectcode", "subjectcomponentcode" to "subjectcomponentcode",
+            "subjectcomponentid" to "subjectcomponentid", "subjectdesc" to "subjectdesc", "subjectid" to "subjectid",
+            "ratingid" to "ratingid", "programid" to "programid", "academicyear" to "academicyear",
         )
     }
 }
@@ -258,7 +275,32 @@ internal fun feedbackPayload(
     put("subjectid", row.raw["subjectid"] ?: JsonNull)
     put("facultyid", row.raw["employeeid"] ?: JsonNull)
     put("registrationid", row.raw["registrationid"] ?: JsonNull)
-    putJsonArray("questionid") { questions.forEach { q -> add(JsonObject(q + ("rating" to JsonPrimitive(rating.name)))) } }
+    row.raw["programid"]?.let { put("programid", it) }
+    row.raw["academicyear"]?.let { put("academicyear", it) }
+    putJsonArray("questionid") {
+        questions.forEach { q ->
+            if ((q["subjective"] as? JsonPrimitive)?.contentOrNull == "Y") {
+                throw PortalException.PortalError(listOf("subjective feedback question is not supported"), 0)
+            }
+            val answer = ((q["ratingmap"] as? JsonObject)?.get(rating.value) as? JsonPrimitive)?.contentOrNull
+                ?: throw PortalException.PortalError(listOf("${rating.value} is not accepted for this feedback question"), 0)
+            add(JsonObject(q + ("rating" to JsonPrimitive(answer))))
+        }
+    }
     put("facultycomments", JsonNull)
     put("coursecomments", JsonNull)
+    putJsonArray("qualifyingExamList") {
+        addJsonObject {
+            put("file", JsonNull)
+            put("fileName", "")
+            put("nameOfExamination", "")
+            put("organizingBody", "")
+            put("yearMonthAppeared", "")
+            put("qualified", "R")
+            put("rank", "")
+            put("base64FileContent", "")
+        }
+    }
+    put("appearedForExam", "N")
+    put("additionalSuggestions", JsonNull)
 }
